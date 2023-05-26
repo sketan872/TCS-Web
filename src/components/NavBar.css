@@ -1,0 +1,30 @@
+.navbar{
+    width: 90%;
+    height: 5.8rem;
+    border-radius: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin: 1.8rem auto;
+    align-items: center;
+}
+
+.navbar .image-container{
+    height: 100%;
+}
+
+.navbar .image-container img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.navbar nav{
+    display: flex;
+    gap: 1rem;
+    margin-right: 3.2rem;
+}
+a{
+    color: azure;
+    text-decoration: none;
+
+}
