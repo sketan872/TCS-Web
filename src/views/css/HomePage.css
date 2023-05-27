@@ -1,0 +1,19 @@
+body{
+    
+   
+}
+.section{
+    height: 115vh;
+    width: 100%;
+    background-color: black;
+    margin: auto;
+    margin-top: 8rem;
+    background-image: url('/public/images/p1.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-style: italic;
+    color: ghostwhite;
+    text-shadow: 3px 3px 3px  ghostwhite;
+}

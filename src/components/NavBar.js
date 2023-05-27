@@ -13,6 +13,6 @@ export default function NavBar(){
                 <a href="https://www.instagram.com/__rahul_goyal___/">Photos</a>
                 <a href="https://www.instagram.com/__rahul_goyal___/">Regestration</a>
             </nav>
-        </div>   
+        </div>
     );
 }
