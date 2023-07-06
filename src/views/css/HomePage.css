@@ -4,12 +4,11 @@ body{
     cursor: url('/public/images/cursor.png'), auto;
 }
 .fpage{
-    height: calc(100vh - 3rem);
+    height: 100vh;
     width: 85%;
     background-color: black;
     margin: auto;
-    margin-top: 3rem;
-    background-image: url('/public/images/p1.jpg');
+    background-image:;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,23 +137,7 @@ body{
   position: relative;
   color: white;
  }
- h1::after {
-  content: "Society";
-  display: inline-block;
-  animation: animation 6.5s steps(9) infinite;
-  width: 0ch;
-  color: rgb(40, 173, 167);
-}
-h1::before {
-  display: inline-block;
-  content: "";
-  width: 2px;
-  height: 100%;
-  background-color: white;
-  position: absolute;
-  right: 0;
-  animation: blinking .4s linear alternate infinite;
-}
+
 @keyframes animation {
   25% {
     content: "Society";
