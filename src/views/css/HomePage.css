@@ -4,7 +4,7 @@ body{
     cursor: url('/public/images/cursor.png'), auto;
 }
 .fpage{
-    height: 94vh;
+    height: calc(100vh - 3rem);
     width: 85%;
     background-color: black;
     margin: auto;
