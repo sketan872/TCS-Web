@@ -1,5 +1,7 @@
-import "./css/HomePage.css";
 import Event from "./events/Event";
+import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
+
+import "./css/HomePage.css";
 
 export default function HomePage() {
   const goals = [
@@ -38,15 +40,14 @@ export default function HomePage() {
         </div>
 
         <div className="goals-container">
-          {goals.map(i => (
-            <div className="goals-card">
-              <div className="goals-image">
-                <img src={i.img} alt={i.imgAlt}/>
-              </div>
-              <div class="goals-name">{i.goalName}</div>
-              <div class="goals-roll">{i.goalRole}</div>
-            </div>
-          ))}
+          {goals.map(i =>
+            <SocietyGoalCard
+              img={i.img}
+              alt={i.imgAlt}
+              title={i.goalName}
+              subtitle={i.goalRole}
+              />
+          )}
         </div>
       </section>
     </>
