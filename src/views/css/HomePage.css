@@ -8,7 +8,6 @@ body{
     width: 85%;
     background-color: black;
     margin: auto;
-    background-image:;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,27 +17,29 @@ body{
     text-shadow: 2px 2px 2px  ghostwhite;
 }
 
-.developer{
+.Society-goals{
     color: black;
     margin: auto;
-    background-color: #dfdfdf;
+    background-color: #232627;
     width: 100%;
     height: 70vh;
     padding: 120px 0%;
     
 }
-.developer .heading{
+.Society-goals .heading{
+    height: 3.5rem;
     width: 100%;
     font-size: 2.5rem;
     color: black;
+    background: white;
     letter-spacing: 0.5rem;
-    font-family: 'Teko Medium', serif;
+    font-family: "Be Vietnam Pro" , sans-serif;
     margin: auto;
     padding: 0%;
 
 }
 .heading {
-    text-shadow: 2px 4px #8988d1;
+    /* text-shadow: 2px 4px #232627; */
     text-align: center;
     
     
@@ -47,9 +48,9 @@ body{
 
 
 
-.dev-container {
+.goals-container {
     display: flex;
-    gap: 2rem;
+    gap: 8.5rem;
     flex-wrap: wrap;
     padding: 2% 7%;
     justify-content: center;
@@ -57,44 +58,45 @@ body{
     overflow-y: scroll;
   }
   
-  .dev-container::-webkit-scrollbar {
+  .goals-container::-webkit-scrollbar {
     display: none;
   }
 
-  .dev-card {
-    width: 15rem;
+  .goals-card {
+    width: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 350px; 
+    height: 380px; 
     color: #333333;
     font-family: poppins;
     text-align: center;
     padding: 2%;
-    background: linear-gradient(135deg, #05022d 0%, #05022d 100%);
+    background: linear-gradient(135deg, #02010e 0%, #232630 100%);
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
+    cursor: pointer;
   }
   
-  .dev-card:hover {
+  .goals-card:hover {
     transform: scale(1.05);
   }
   
-  .dev-name {
+  .goals-name {
     width: 15rem;
     font-weight: lighter;
     padding: 0%;
     color: #ffffff;
   }
   
-  .dev-roll {
+  .goals-roll {
     text-align: center;
     width: 15rem;
     color: #ffffff;
   }
   
-  .dev-name::after {
+  .goals-name::after {
     content: '';
     height: 3px;
     width: 30%;
@@ -106,7 +108,7 @@ body{
     margin-top: 2%;
   }
   
-  .dev-image {
+  .goals-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,11 +120,11 @@ body{
     transition: transform 0.2s;
   }
   
-  .dev-image:hover {
+  .goals-image:hover {
     transform: scale(1.1);
   }
   
-  .dev-image img {
+  .goals-image img {
     -webkit-user-drag: none;
     user-select: none;
     height: 100%;

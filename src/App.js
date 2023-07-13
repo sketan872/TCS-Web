@@ -7,11 +7,12 @@ function App() {
   return (
     <>
       <NavBar/>
+      <HomePage/>
       <Routes>
         <Route exact path="/" element={<HomePage/>}/>
 
         <Route path="*" element={<h1>404</h1>}/>
-      </Routes>
+      </Routes> 
     </>
   );
 }

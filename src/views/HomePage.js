@@ -6,49 +6,53 @@ export default function HomePage() {
         <>
           <section class="fpage" id="fpage">
             <div className="content">
-                <h1>TIT&S Computer </h1>
+                <h1>Rahul Goyal s</h1>
             </div>
           </section>
-          <section class="developer" id="developer">
+          <section class="Society-goals" id="Society-goals">
             <div className="heading">
-              <span>Developers</span>
+              <span>Society Goals</span>
             </div>
 
-          <div className="dev-container">
+          <div className="goals-container">
 
-          <div className="dev-card">
-            <div className="dev-image">
-                <img src="/images/p1.jpg"></img>
+          <div className="goals-card">
+            <div className="goals-image">
+                <img src="/images/MM.jpg"></img>
             </div>
-            <div class="dev-name">
-                Mohit 
+            <div class="goals-name">
+                 Presentation Expert
             </div>
-            <div class="dev-roll">Web-Developer</div>
+            <div class="goals-roll">Presentations are the most important aspect of the IT industry that an 
+                 intern should be skilled in and we look this skill as an important goal.</div>
           </div>
           
-          <div className="dev-card">
-            <div className="dev-image">
-                <img src="/images/rahul.webp"></img>
+          <div className="goals-card">
+            <div className="goals-image">
+                <img src="/images/rah.jpg"></img>
             </div>
-            <div class="dev-name">
-                 Rahul Goyal &#128526;&#128520;&#128509;
+            <div class="goals-name">
+               Skilled Resume
             </div>
-            <div class="dev-roll">Front-End Developer</div>
+            <div class="goals-roll">Making each member aware about the technology prevailing in the IT industry  
+                 and helping them achieve those skills to fit in resume.</div>
           </div>
 
-          <div className="dev-card">
-            <div className="dev-image">
-                <img src="/images/vidhukant.webp"></img>
+          <div className="goals-card">
+            <div className="goals-image">
+                <img src="/images/vid.jpg"></img>
             </div>
-            <div class="dev-name">
-                Vidhu Kand Shama
+            <div class="goals-name">
+               Placement Ready
             </div>
-            <div class="dev-roll">Back-End Developer</div>
+            <div class="goals-roll">The ultimate Goal is to make an individual ready for the Placement that every 
+                 student thrives for.<br></br> <br></br></div>
           </div>
          
           </div>
           </section>
           <Event/>
+          <p color="white">hello mu ajhfasalkd</p>
         </>
     );
 }
