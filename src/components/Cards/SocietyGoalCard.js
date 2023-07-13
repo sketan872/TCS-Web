@@ -6,8 +6,8 @@ const SocietyGoalCard = ({img, alt, title, subtitle}) => {
       <div className="goals-image">
         <img src={img} alt={alt}/>
       </div>
-      <div class="goals-name">{title}</div>
-      <div class="goals-roll">{subtitle}</div>
+      <div className="goals-name">{title}</div>
+      <div className="goals-roll">{subtitle}</div>
     </div>
   );
 }

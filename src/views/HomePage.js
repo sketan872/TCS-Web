@@ -28,20 +28,21 @@ export default function HomePage() {
 
   return (
     <>
-      <section class="fpage" id="fpage">
+      <section className="fpage" id="fpage">
         <div className="content">
           <h1>Rahul Goyal</h1>
         </div>
       </section>
 
-      <section class="Society-goals" id="Society-goals">
+      <section className="Society-goals" id="Society-goals">
         <div className="heading">
           <span>Society Goals</span>
         </div>
 
         <div className="goals-container">
-          {goals.map(i =>
+          {goals.map((i, id) =>
             <SocietyGoalCard
+              key={`goal-${id}`}
               img={i.img}
               alt={i.imgAlt}
               title={i.goalName}

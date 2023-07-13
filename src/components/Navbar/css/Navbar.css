@@ -1,0 +1,41 @@
+body{
+  cursor: url('/public/images/cursor.png'), auto;
+}
+
+.navbar{
+  position: fixed; top: 0; left: 0;
+  width: 100%;
+  height: 5.8rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  margin: auto;
+  align-items: center;
+  font-size: x-large;
+  background: rgba(50, 47, 47, 0.3)
+}
+
+.navbar .image-container {
+  height: 100%;
+  margin-left: 5rem;
+}
+
+.navbar .image-container img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 3rem;
+  margin-right: 2.5rem;
+}
+
+.navbar a {
+  color: azure;
+  text-decoration: none;
+}
+
+.navbar a.current {
+  text-decoration: underline;
+}
