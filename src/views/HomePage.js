@@ -46,9 +46,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
       <CardsSection
         title={"Society Goals"}
-        bgColorTitle={"#43e0d0"}
+        bgColorTitle={"#f8f8ff"}
         fgColorTitle={"black"}
-        bgColor={"#161020"}
+        bgColor={"black"}
         fgColor={"white"}
         cards={
           goals.map((i, id) =>
