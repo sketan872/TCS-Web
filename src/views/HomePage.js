@@ -46,7 +46,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
       <CardsSection
         title={"Society Goals"}
-        bgColorTitle={"white"}
+        bgColorTitle={"#43e0d0"}
         fgColorTitle={"black"}
         bgColor={"#161020"}
         fgColor={"white"}
@@ -67,8 +67,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
       <CardsSection
         title={"Projects"}
-        bgColorTitle={"white"}
-        fgColorTitle={"black"}
+        bgColorTitle={"#b343e0"}
+        fgColorTitle={"white"}
         bgColor={"#161020"}
         fgColor={"white"}
         cards={
@@ -88,8 +88,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
       <CardsSection
         title={"Post Holders"}
-        bgColorTitle={"white"}
-        fgColorTitle={"black"}
+        bgColorTitle={"#64dbc4"}
+        fgColorTitle={"#232627"}
         bgColor={"#161020"}
         fgColor={"white"}
         cards={
