@@ -1,9 +1,18 @@
-import Event from "./events/Event";
+import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 
 import "./css/HomePage.css";
 
 export default function HomePage() {
+
+  const title = "Hello World";
+  const subtitle = `
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+`;
+
   const goals = [
     // TODO: goals baad me backend se uthane hai
     {
@@ -28,11 +37,12 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="fpage" id="fpage">
-        <div className="content">
-          <h1>Rahul Goyal</h1>
-        </div>
-      </section>
+      <CircularLogoAndText
+        title={title}
+        subtitle={subtitle}
+        logoPath="/images/vidhukant.webp"
+        logoAlt="ladsjfladjfa"
+        />
 
       <section className="Society-goals" id="Society-goals">
         <div className="heading">
