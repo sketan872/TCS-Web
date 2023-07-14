@@ -5,6 +5,7 @@ import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 import "./css/HomePage.css";
 
 export default function HomePage() {
+  // NOTE: probably will be loaded from backend
   const title = "Hello World";
   const subtitle = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -61,6 +62,49 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           )
         }
         />
+
+      <h1>Events yaha aayenge</h1>
+
+      <CardsSection
+        title={"Projects"}
+        bgColorTitle={"white"}
+        fgColorTitle={"black"}
+        bgColor={"#161020"}
+        fgColor={"white"}
+        cards={
+          goals.map((i, id) =>
+            <SocietyGoalCard
+              key={`goal-${id}`}
+              img={i.img}
+              alt={i.imgAlt}
+              title={i.goalName}
+              subtitle={i.goalRole}
+              />
+          )
+        }
+        />
+
+      <h1>Technologies yaha aayegi</h1>
+
+      <CardsSection
+        title={"Post Holders"}
+        bgColorTitle={"white"}
+        fgColorTitle={"black"}
+        bgColor={"#161020"}
+        fgColor={"white"}
+        cards={
+          goals.map((i, id) =>
+            <SocietyGoalCard
+              key={`goal-${id}`}
+              img={i.img}
+              alt={i.imgAlt}
+              title={i.goalName}
+              subtitle={i.goalRole}
+              />
+          )
+        }
+        />
+
     </>
   );
 }
