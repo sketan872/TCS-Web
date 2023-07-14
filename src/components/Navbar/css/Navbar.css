@@ -1,20 +1,19 @@
 .navbar {
+  height: var(--nav-height);
+  width: 100%;
   position: fixed;
   top: 0; left: 0;
-  width: 100%;
-  height: 5.8rem;
   display: flex;
-  justify-content: space-between;
-  background-color: black;
-  margin: auto;
   align-items: center;
-  font-size: x-large;
-  background-color: rgba(50, 47, 47, 0.3)
+  justify-content: space-between;
+  font-size: 1.4rem;
+  background-color: #272727;
+  z-index: 10;
 }
 
 .image-container {
-  height: 4.5rem;
-  width: 4.5rem;
+  height: calc(var(--nav-height) - 0.7rem);
+  width: calc(var(--nav-height) - 0.7rem);
   margin-left: 5rem;
 }
 

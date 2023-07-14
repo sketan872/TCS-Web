@@ -61,6 +61,40 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           )}
         </div>
       </section>
+      <section className="Society-goals" id="Society-goals">
+        <div className="heading">
+          <span>Society Goals</span>
+        </div>
+
+        <div className="goals-container">
+          {goals.map((i, id) =>
+            <SocietyGoalCard
+              key={`goal-${id}`}
+              img={i.img}
+              alt={i.imgAlt}
+              title={i.goalName}
+              subtitle={i.goalRole}
+              />
+          )}
+        </div>
+      </section>
+      <section className="Society-goals" id="Society-goals">
+        <div className="heading">
+          <span>Society Goals</span>
+        </div>
+
+        <div className="goals-container">
+          {goals.map((i, id) =>
+            <SocietyGoalCard
+              key={`goal-${id}`}
+              img={i.img}
+              alt={i.imgAlt}
+              title={i.goalName}
+              subtitle={i.goalRole}
+              />
+          )}
+        </div>
+      </section>
     </>
   );
 }
