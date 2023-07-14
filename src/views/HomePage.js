@@ -1,13 +1,12 @@
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
+import CardsSection from "./../components/Sections/CardsSection";
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 
 import "./css/HomePage.css";
 
 export default function HomePage() {
-
   const title = "Hello World";
   const subtitle = `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -40,17 +39,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <CircularLogoAndText
         title={title}
         subtitle={subtitle}
-        logoPath="/images/vidhukant.webp"
+        logoPath="/images/site-logo.png"
         logoAlt="ladsjfladjfa"
         />
 
-      <section className="Society-goals" id="Society-goals">
-        <div className="heading">
-          <span>Society Goals</span>
-        </div>
-
-        <div className="goals-container">
-          {goals.map((i, id) =>
+      <CardsSection
+        title={"Society Goals"}
+        bgColorTitle={"white"}
+        fgColorTitle={"black"}
+        bgColor={"#161020"}
+        fgColor={"white"}
+        cards={
+          goals.map((i, id) =>
             <SocietyGoalCard
               key={`goal-${id}`}
               img={i.img}
@@ -58,43 +58,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
               title={i.goalName}
               subtitle={i.goalRole}
               />
-          )}
-        </div>
-      </section>
-      <section className="Society-goals" id="Society-goals">
-        <div className="heading">
-          <span>Society Goals</span>
-        </div>
-
-        <div className="goals-container">
-          {goals.map((i, id) =>
-            <SocietyGoalCard
-              key={`goal-${id}`}
-              img={i.img}
-              alt={i.imgAlt}
-              title={i.goalName}
-              subtitle={i.goalRole}
-              />
-          )}
-        </div>
-      </section>
-      <section className="Society-goals" id="Society-goals">
-        <div className="heading">
-          <span>Society Goals</span>
-        </div>
-
-        <div className="goals-container">
-          {goals.map((i, id) =>
-            <SocietyGoalCard
-              key={`goal-${id}`}
-              img={i.img}
-              alt={i.imgAlt}
-              title={i.goalName}
-              subtitle={i.goalRole}
-              />
-          )}
-        </div>
-      </section>
+          )
+        }
+        />
     </>
   );
 }

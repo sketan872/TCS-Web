@@ -27,6 +27,13 @@
   white-space: pre-line;
 }
 
+.imageWrapper {
+  height: 25rem;
+  width: 25rem;
+}
+
 .imageWrapper img {
   border-radius: 50%;
+  max-height: 100%;
+  max-width: 100%;
 }

@@ -3,7 +3,7 @@ import styles from "./css/CircularLogoAndText.module.css";
 
 const CircularLogoAndText = ({logoPath, logoAlt, title, subtitle}) => {
   return (
-    <div className={sectionStyles.section}>
+    <div className={sectionStyles.sectionFlex}>
       <div className={styles.subsection}>
         <div className={styles.text}>
           <div className={styles.title}>

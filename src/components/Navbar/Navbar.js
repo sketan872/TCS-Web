@@ -13,6 +13,7 @@ const Navbar = _ => {
       setScreenWidth(window.innerWidth))
   , []);
 
+  // idk why we listening to width changes!!!
   console.log(screenWidth);
 
   const links = [
