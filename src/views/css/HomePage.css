@@ -1,28 +1,4 @@
 body{
-  margin: auto;
   background-color: black;
-  cursor: url('/public/images/cursor.png'), auto;
+  overflow-x: hidden;
 }
-
-.Society-goals{
-  color: black;
-  margin: auto;
-  background-color: #161020;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.goals-container {
-  display: flex;
-  gap: 8.5rem;
-  flex-wrap: wrap;
-  padding: 2% 7%;
-  justify-content: center;
-  user-select: none;
-  overflow-y: scroll;
-}
-  
-.goals-container::-webkit-scrollbar {
-  display: none;
-}
-
