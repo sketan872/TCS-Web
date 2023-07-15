@@ -1,5 +1,19 @@
+import { useState, useEffect } from "react";
+
+import {
+  getFrontpageText,
+  getSocietyGoals,
+  getEvents,
+  getProjects,
+  getTechnologiesUsed,
+  getPostHolders
+} from "./../getters";
+
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
+import EventsSection from "./../components/Sections/EventsSection";
+import TechnologiesSection from "./../components/Sections/TechnologiesSection";
+
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 import PostHolderCard from "./../components/Cards/PostHolderCard";
 import ProjectsCard from "./../components/Cards/ProjectsCard";
@@ -7,97 +21,33 @@ import ProjectsCard from "./../components/Cards/ProjectsCard";
 import "./css/HomePage.css";
 
 export default function HomePage() {
-  // NOTE: probably will be loaded from backend
-  const title = "Hello World";
-  const subtitle = `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  const [fpText, setFpText] = useState({});
+  const [goals, setGoals] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [projects, setProjects] = useState([]);
+  const [technologies, setTechnologies] = useState([]);
+  const [postHolders, setPostHolders] = useState([]);
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-`;
-
-  const goals = [
-    // TODO: goals baad me backend se uthane hai
-    {
-      img: "/images/MM.jpg",
-      imgAlt: "MM",
-      goalName: "Presentation Expert",
-      goalRole: "Presentations are the most important aspect of the IT industry that an intern should be skilled in and we look this skill as an important goal.",
-    },
-    {
-      img: "/images/rah.jpg",
-      imgAlt: "rah",
-      goalName: "Skilled Resume",
-      goalRole: "Making each member aware about the technology prevailing in the IT industry and helping them achieve those skills to fit in resume.",
-    },
-    {
-      img: "/images/vid.jpg",
-      imgAlt: "vid",
-      goalName: "Placement Ready",
-      goalRole: "The ultimate Goal is to make an individual ready for the Placement that every student thrives for.",
-    }
-  ]
-
-  const projects = [
-  
-    {
-      img: "/images/p1.jpg",
-      imgAlt: "Madhur Verma (President)",
-      goalName: "WEBSITE",
-      goalRole: "BadAss website",
-    },
-    {
-      img: "/images/ps.webp",
-      imgAlt: "Mahima Bhardwaj (Vice President)",
-      goalName: "APP",
-      goalRole: "let's see how it will be",
-    },
-  ]
-
-
-  //post holder 
-  const postholder = [
-  
-    {
-      img: "/images/madhur.jpg",
-      imgAlt: "Madhur Verma (President)",
-      goalName: "Madhur Verma",
-      goalRole: "President",
-    },
-    {
-      img: "/images/mahima.jpg",
-      imgAlt: "Mahima Bhardwaj (Vice President)",
-      goalName: "Mahima Bhardwaj",
-      goalRole: "Vice President",
-    },
-    {
-      img: "/images/mohit.jpg",
-      imgAlt: "Mohit Saini (Technical Head)",
-      goalName: "Mohit Saini",
-      goalRole: "Technical Head",
-    },
-    {
-      img: "/images/vanshika.jpg",
-      imgAlt: "Vanshika Kakkar (Media Head)",
-      goalName: "Vanshika Kakkar",
-      goalRole: "Media Head",
-    }
-  ]
+  useEffect(_ => {
+    setFpText(getFrontpageText());
+    setGoals(getSocietyGoals());
+    setEvents(getEvents());
+    setProjects(getProjects());
+    setTechnologies(getTechnologiesUsed());
+    setPostHolders(getPostHolders());
+  }, []);
 
   return (
     <>
       <CircularLogoAndText
-        title={title}
-        subtitle={subtitle}
+        title={fpText.title}
+        subtitle={fpText.subtitle}
         logoPath="/images/site-logo.png"
         logoAlt="ladsjfladjfa"
         />
 
       <CardsSection
         title={"Society Goals"}
-        bgColorTitle={"#f8f8ff"}
-        fgColorTitle={"black"}
-        bgColor={"black"}
-        fgColor={"white"}
         cards={
           goals.map((i, id) =>
             <SocietyGoalCard
@@ -111,18 +61,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         }
         />
 
-      <h1>Events yaha aayenge</h1>
+      <EventsSection
+        title={"Events"}
+        events={events}
+        />
 
       <CardsSection
         title={"Projects"}
-        bgColorTitle={"white"}
-        fgColorTitle={"black"}
-        bgColor={"black"}
-        fgColor={"white"}
         cards={
           projects.map((i, id) =>
             <ProjectsCard
-              key={`goal-${id}`}
+              key={`project-${id}`}
               img={i.img}
               alt={i.imgAlt}
               title={i.goalName}
@@ -132,16 +81,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         }
         />
 
-      <h1>Technologies yaha aayegi</h1>
+      <TechnologiesSection
+        title={"Technologies"}
+        technologies={technologies}
+        />
 
       <CardsSection
         title={"Post Holders"}
-        bgColorTitle={"white"}
-        fgColorTitle={"black"}
-        bgColor={"black"}
-        fgColor={"white"}
         cards={
-          postholder.map((i, id) =>
+          postHolders.map((i, id) =>
             <PostHolderCard
               key={`postholder-${id}`}
               img={i.img}
@@ -152,7 +100,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           )
         }
         />
-
     </>
   );
 }

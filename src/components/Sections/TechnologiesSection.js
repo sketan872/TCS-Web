@@ -1,9 +1,9 @@
 import SectionTitle from "./SectionTitle";
 
 import sectionStyles from "./css/section.module.css";
-import styles from "./css/TechnologiesSection.module.css";
+import styles from "./css/EventsSection.module.css";
 
-const CardsSection = ({title, bgColor, fgColor, bgColorTitle, fgColorTitle, cards}) => {
+const TechnologiesSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle = "white", fgColorTitle = "black", cards}) => {
   return (
     <div
       className={title ? sectionStyles.sectionWithTitle : sectionStyles.section}
@@ -25,4 +25,4 @@ const CardsSection = ({title, bgColor, fgColor, bgColorTitle, fgColorTitle, card
   );
 }
 
-export default CardsSection;
+export default TechnologiesSection;
