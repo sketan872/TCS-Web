@@ -95,5 +95,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 }
 
 export function getEvents() {
-  return [];
+  return [
+    {
+      title: "Event 1",
+      img: "",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      title: "Event 2",
+      img: "",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    }
+  ];
 }
