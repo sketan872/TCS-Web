@@ -38,25 +38,25 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   const postholder = [
     // TODO: goals baad me backend se uthane hai
     {
-      img: "/images/rahul.webp",
+      img: "/images/madhur.jpg",
       imgAlt: "Madhur Verma (President)",
       goalName: "Madhur Verma",
       goalRole: "President",
     },
     {
-      img: "/images/vidhukant.webp",
+      img: "/images/mahima.jpg",
       imgAlt: "Mahima Bhardwaj (Vice President)",
       goalName: "Mahima Bhardwaj",
       goalRole: "Vice President",
     },
     {
-      img: "/images/rahul.webp",
+      img: "/images/mohit.jpg",
       imgAlt: "Mohit Saini (Technical Head)",
       goalName: "Mohit Saini",
       goalRole: "Technical Head",
     },
     {
-      img: "/images/rahul.webp",
+      img: "/images/vanshika.jpg",
       imgAlt: "Vanshika Kakkar (Media Head)",
       goalName: "Vanshika Kakkar",
       goalRole: "Media Head",
