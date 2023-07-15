@@ -1,4 +1,3 @@
-
 .card {
   width: 18rem;
   max-width: 95%;
@@ -19,6 +18,14 @@
 
 *.card:hover {
   transform: scale(1.05);
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 5rem;
 }
 
 .title, .subtitle {

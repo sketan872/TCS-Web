@@ -1,6 +1,7 @@
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
+import PostHolderCard from "./../components/Cards/PostHolderCard";
 
 import "./css/HomePage.css";
 
@@ -38,21 +39,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     // TODO: goals baad me backend se uthane hai
     {
       img: "/images/rahul.webp",
-      imgAlt: "MM",
-      goalName: "TCS ka future president",
-      goalRole: "Rahul Goyal",
+      imgAlt: "Madhur Verma (President)",
+      goalName: "Madhur Verma",
+      goalRole: "President",
     },
     {
       img: "/images/vidhukant.webp",
-      imgAlt: "rah",
-      goalName: "Orators ka future president",
-      goalRole: "Vidhu kant Sharma",
+      imgAlt: "Mahima Bhardwaj (Vice President)",
+      goalName: "Mahima Bhardwaj",
+      goalRole: "Vice President",
     },
     {
       img: "/images/rahul.webp",
-      imgAlt: "vid",
-      goalName: "other fevicol members",
-      goalRole: "Struggling to get any post",
+      imgAlt: "Mohit Saini (Technical Head)",
+      goalName: "Mohit Saini",
+      goalRole: "Technical Head",
+    },
+    {
+      img: "/images/rahul.webp",
+      imgAlt: "Vanshika Kakkar (Media Head)",
+      goalName: "Vanshika Kakkar",
+      goalRole: "Media Head",
     }
   ]
 
@@ -90,7 +97,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         title={"Projects"}
         bgColorTitle={"white"}
         fgColorTitle={"black"}
-        bgColor={"#161020"}
+        bgColor={"black"}
         fgColor={"white"}
         cards={
           goals.map((i, id) =>
@@ -111,12 +118,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         title={"Post Holders"}
         bgColorTitle={"white"}
         fgColorTitle={"black"}
-        bgColor={"#161020"}
+        bgColor={"black"}
         fgColor={"white"}
         cards={
           postholder.map((i, id) =>
-            <SocietyGoalCard
-              key={`goal-${id}`}
+            <PostHolderCard
+              key={`postholder-${id}`}
               img={i.img}
               alt={i.imgAlt}
               title={i.goalName}
