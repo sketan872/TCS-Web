@@ -1,5 +1,5 @@
 
-.goals-card {
+.card {
   width: 17rem;
   display: flex;
   flex-direction: column;
@@ -16,24 +16,24 @@
   cursor: pointer;
 }
 
-.goals-card:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-.goals-name {
+.title {
   width: 15rem;
   font-weight: lighter;
   padding: 0%;
   color: #ffffff;
 }
 
-.goals-roll {
+.subtitle {
   text-align: center;
   width: 15rem;
   color: #ffffff;
 }
 
-.goals-name::after {
+.title::after {
   content: '';
   height: 3px;
   width: 30%;
@@ -45,7 +45,7 @@
   margin-top: 2%;
 }
 
-.goals-image {
+.img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +57,7 @@
   transition: transform 0.2s;
 }
 
-.goals-image img {
+.img img {
   -webkit-user-drag: none;
   user-select: none;
   height: 100%;
