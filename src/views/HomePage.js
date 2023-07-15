@@ -2,6 +2,7 @@ import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 import PostHolderCard from "./../components/Cards/PostHolderCard";
+import ProjectsCard from "./../components/Cards/ProjectsCard";
 
 import "./css/HomePage.css";
 
@@ -35,8 +36,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       goalRole: "The ultimate Goal is to make an individual ready for the Placement that every student thrives for.",
     }
   ]
+
+  const projects = [
+  
+    {
+      img: "/images/p1.jpg",
+      imgAlt: "Madhur Verma (President)",
+      goalName: "WEBSITE",
+      goalRole: "BadAss website",
+    },
+    {
+      img: "/images/ps.webp",
+      imgAlt: "Mahima Bhardwaj (Vice President)",
+      goalName: "APP",
+      goalRole: "let's see how it will be",
+    },
+  ]
+
+
+  //post holder 
   const postholder = [
-    // TODO: goals baad me backend se uthane hai
+  
     {
       img: "/images/madhur.jpg",
       imgAlt: "Madhur Verma (President)",
@@ -100,8 +120,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         bgColor={"black"}
         fgColor={"white"}
         cards={
-          goals.map((i, id) =>
-            <SocietyGoalCard
+          projects.map((i, id) =>
+            <ProjectsCard
               key={`goal-${id}`}
               img={i.img}
               alt={i.imgAlt}
