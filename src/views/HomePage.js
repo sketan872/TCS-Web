@@ -11,11 +11,11 @@ import {
 
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
-import TechnologiesSection from "./../components/Sections/TechnologiesSection";
 
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
-import PostHolderCard from "./../components/Cards/PostHolderCard";
 import ProjectsCard from "./../components/Cards/ProjectsCard";
+import TechnologyCard from "./../components/Cards/TechnologyCard";
+import PostHolderCard from "./../components/Cards/PostHolderCard";
 
 import "./css/HomePage.css";
 
@@ -50,7 +50,7 @@ export default function HomePage() {
         cards={
           goals.map((i, id) =>
             <SocietyGoalCard
-              key={`goal-${id}`}
+              key={id}
               img={i.img}
               alt={i.imgAlt}
               title={i.goalName}
@@ -65,7 +65,7 @@ export default function HomePage() {
         cards={
           events.map((i, id) =>
             <SocietyGoalCard
-              key={`event-${id}`}
+              key={id}
               img={i.img}
               alt={`${i.title} Poster`}
               title={i.title}
@@ -80,7 +80,7 @@ export default function HomePage() {
         cards={
           projects.map((i, id) =>
             <ProjectsCard
-              key={`project-${id}`}
+              key={id}
               img={i.img}
               alt={i.imgAlt}
               title={i.goalName}
@@ -90,9 +90,18 @@ export default function HomePage() {
         }
         />
 
-      <TechnologiesSection
+      <CardsSection
         title={"Technologies"}
-        technologies={technologies}
+        cards={
+          technologies.map((i, id) =>
+            <TechnologyCard
+              key={id}
+              img={i.img}
+              title={i.title}
+              subtitle={i.subtitle}
+              />
+          )
+        }
         />
 
       <CardsSection
@@ -100,7 +109,7 @@ export default function HomePage() {
         cards={
           postHolders.map((i, id) =>
             <PostHolderCard
-              key={`postholder-${id}`}
+              key={id}
               img={i.img}
               alt={i.imgAlt}
               title={i.goalName}
