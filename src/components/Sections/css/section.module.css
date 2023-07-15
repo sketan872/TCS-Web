@@ -17,7 +17,6 @@
 }
 
 .sectionTitle {
-  position: sticky;
   top: var(--nav-height);
   z-index: 9;
   height: var(--section-title-height);

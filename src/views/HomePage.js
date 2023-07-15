@@ -34,6 +34,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       goalRole: "The ultimate Goal is to make an individual ready for the Placement that every student thrives for.",
     }
   ]
+  const postholder = [
+    // TODO: goals baad me backend se uthane hai
+    {
+      img: "/images/rahul.webp",
+      imgAlt: "MM",
+      goalName: "TCS ka future president",
+      goalRole: "Rahul Goyal",
+    },
+    {
+      img: "/images/vidhukant.webp",
+      imgAlt: "rah",
+      goalName: "Orators ka future president",
+      goalRole: "Vidhu kant Sharma",
+    },
+    {
+      img: "/images/rahul.webp",
+      imgAlt: "vid",
+      goalName: "other fevicol members",
+      goalRole: "Struggling to get any post",
+    }
+  ]
 
   return (
     <>
@@ -67,8 +88,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
       <CardsSection
         title={"Projects"}
-        bgColorTitle={"#b343e0"}
-        fgColorTitle={"white"}
+        bgColorTitle={"white"}
+        fgColorTitle={"black"}
         bgColor={"#161020"}
         fgColor={"white"}
         cards={
@@ -88,12 +109,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
       <CardsSection
         title={"Post Holders"}
-        bgColorTitle={"#64dbc4"}
-        fgColorTitle={"#232627"}
+        bgColorTitle={"white"}
+        fgColorTitle={"black"}
         bgColor={"#161020"}
         fgColor={"white"}
         cards={
-          goals.map((i, id) =>
+          postholder.map((i, id) =>
             <SocietyGoalCard
               key={`goal-${id}`}
               img={i.img}
