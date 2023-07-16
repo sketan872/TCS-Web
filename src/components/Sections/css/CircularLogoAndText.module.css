@@ -37,3 +37,14 @@
   max-height: 100%;
   max-width: 100%;
 }
+
+@media (max-width: 1281px) {
+  .subsection {
+    flex-direction: column-reverse;
+  }
+
+  .text {
+    color: white;
+    width: 95%;
+  }
+}
