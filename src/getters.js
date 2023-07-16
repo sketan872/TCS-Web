@@ -112,14 +112,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 export function getEvents() {
   return [
     {
-      title: "Event 1",
-      img: "/images/MM.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      title: "BGMI",
+      img: "/images/bgmi.jpeg",
+      description: "BGMI is the annual gaming event organised by our society in which the winner can redeem the cash prize and t-shirts."
     },
     {
-      title: "Event 2",
-      img: "/images/MM.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    }
+      title: "CODE WAR",
+      img: "/images/codewar.jpeg",
+      description: "Code War is the annual coding event of the society and the winner gets the tag of coder of the year on our website."
+    },
+    {
+      title: "Qates      ",
+      img: "/images/qates.jpeg",
+      description: "Qates is the fun-tech Quiz event of the society which is organised to check the tech awareness of the students."
+    },
+    {
+      title: "Slackware",
+      img: "/images/slackware.jpeg",
+      description: "Slackware is an exciting workshop that include making viruses, the remote sensing of different devices and other exciting hacks."
+    },
   ];
 }
