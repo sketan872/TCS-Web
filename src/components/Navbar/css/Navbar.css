@@ -44,6 +44,7 @@
   background-size: 100% 33.33%;
   transform: rotate(90deg);
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 641px)  {
@@ -53,11 +54,11 @@
 }
 
 @media (max-width: 1281px) {
-  .lowPriority {
+  .navbar .lowPriority {
     display: none;
   }
 
-  .verticalDots {
+  .navbar .verticalDots {
     display: block;
   }
 }

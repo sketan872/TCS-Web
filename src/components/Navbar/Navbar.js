@@ -1,45 +1,9 @@
 import { useLocation, Link } from 'react-router-dom';
-import { useEffect, useState } from "react";
 
 import "./css/Navbar.css";
 
-const Navbar = _ => {
+const Navbar = ({ items, openMenu }) => {
   const location = useLocation().pathname;
-
-  // listen to screen width changes
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  useEffect(_ =>
-    window.addEventListener("resize", _ =>
-      setScreenWidth(window.innerWidth))
-  , []);
-
-  // idk why we listening to width changes!!!
-  console.log(screenWidth);
-
-  const links = [
-    {
-      label: "Home",
-      path: "/"
-    }, {
-      label: "Instagram",
-      path: "https://www.instagram.com/__rahul_goyal___/",
-      lowPriority: true
-    }, {
-      label: "Facebook",
-      path: "https://www.facebook.com/profile.php?id=100038954747406",
-      lowPriority: true
-    }, {
-      label: "GitHub",
-      path: "https://github.com/rahulsenpai",
-      lowPriority: true
-    }, {
-      label: "Photos",
-      path: "https://www.instagram.com/__rahul_goyal___/",
-    }, {
-      label: "Registration",
-      path: "https://www.instagram.com/__rahul_goyal___/",
-    }
-  ];
 
   return (
     <div className="navbar">
@@ -48,7 +12,7 @@ const Navbar = _ => {
       </div>
 
       <nav>
-        {links.map((i, id) =>
+        {items.map((i, id) =>
           <Link
             key={id}
             className={`${location === i.path ? "current" : null}${i.lowPriority ? " lowPriority" : null}`}
@@ -57,7 +21,7 @@ const Navbar = _ => {
             {i.label}
           </Link>
         )}
-        <div className="verticalDots"></div>
+        <div className="verticalDots" onClick={openMenu}></div>
       </nav>
     </div>
   );
