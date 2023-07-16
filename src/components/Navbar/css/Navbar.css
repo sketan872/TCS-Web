@@ -36,3 +36,28 @@
 .navbar nav a.current {
   text-decoration: underline;
 }
+
+.verticalDots {
+  width: 0.5rem;
+  height: 2rem;
+  background-image: radial-gradient(circle, ghostwhite 0.2rem, transparent 0.2rem);
+  background-size: 100% 33.33%;
+  transform: rotate(90deg);
+  display: none;
+}
+
+@media (max-width: 641px)  {
+  .navbar a {
+    display: none;
+  }
+}
+
+@media (max-width: 1281px) {
+  .lowPriority {
+    display: none;
+  }
+
+  .verticalDots {
+    display: block;
+  }
+}

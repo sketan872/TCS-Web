@@ -21,23 +21,23 @@ const Navbar = _ => {
       label: "Home",
       path: "/"
     }, {
-      label: "Test Page",
-      path: "/test"
-    }, {
       label: "Instagram",
-      path: "https://www.instagram.com/__rahul_goyal___/"
+      path: "https://www.instagram.com/__rahul_goyal___/",
+      lowPriority: true
     }, {
       label: "Facebook",
-      path: "https://www.facebook.com/profile.php?id=100038954747406"
+      path: "https://www.facebook.com/profile.php?id=100038954747406",
+      lowPriority: true
     }, {
       label: "GitHub",
-      path: "https://github.com/rahulsenpai"
+      path: "https://github.com/rahulsenpai",
+      lowPriority: true
     }, {
       label: "Photos",
-      path: "https://www.instagram.com/__rahul_goyal___/"
+      path: "https://www.instagram.com/__rahul_goyal___/",
     }, {
       label: "Registration",
-      path: "https://www.instagram.com/__rahul_goyal___/"
+      path: "https://www.instagram.com/__rahul_goyal___/",
     }
   ];
 
@@ -48,7 +48,16 @@ const Navbar = _ => {
       </div>
 
       <nav>
-        {links.map((i, id) => <Link key={`nav-${id}`} className={location === i.path ? "current" : null} to={i.path}>{i.label}</Link>)}
+        {links.map((i, id) =>
+          <Link
+            key={id}
+            className={`${location === i.path ? "current" : null}${i.lowPriority ? " lowPriority" : null}`}
+            to={i.path}
+          >
+            {i.label}
+          </Link>
+        )}
+        <div className="verticalDots"></div>
       </nav>
     </div>
   );
