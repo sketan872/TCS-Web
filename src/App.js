@@ -8,7 +8,7 @@ import HomePage from './views/HomePage';
 import './App.css';
 
 function App() {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
   const menuItems = [
     {
       label: "Home",
