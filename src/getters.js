@@ -77,8 +77,23 @@ export function getTechnologiesUsed() {
   return [
     {
       img: "/images/MM.jpg",
-      imgAlt: "MM",
-      title: "JavaScript"
+      title: "JavaScript",
+      subtitle: "The programming language of the web"
+    },
+    {
+      img: "/images/MM.jpg",
+      title: "JavaScript",
+      subtitle: "The programming language of the web"
+    },
+    {
+      img: "/images/MM.jpg",
+      title: "JavaScript",
+      subtitle: "The programming language of the web"
+    },
+    {
+      img: "/images/MM.jpg",
+      title: "JavaScript",
+      subtitle: "The programming language of the web"
     },
   ];
 }
