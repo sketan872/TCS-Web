@@ -72,4 +72,8 @@
     color: white;
     width: 95%;
   }
+
+  .buttonContainer {
+    justify-content: center;
+  }
 }
