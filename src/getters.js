@@ -97,13 +97,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 export function getEvents() {
   return [
     {
-      title: "Event 1",
-      img: "",
+      title: "Event",
+      img: "/images/rahul.webp",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       title: "Event 2",
-      img: "",
+      img: "/images/vidhukant.webp",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     }
   ];

@@ -12,7 +12,7 @@ import {
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
 import TechnologiesSection from "./../components/Sections/TechnologiesSection";
-
+import EventCard from "./../components/Cards/EventCard";
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 import PostHolderCard from "./../components/Cards/PostHolderCard";
 import ProjectsCard from "./../components/Cards/ProjectsCard";
@@ -64,7 +64,7 @@ export default function HomePage() {
         title={"Events"}
         cards={
           events.map((i, id) =>
-            <SocietyGoalCard
+            <EventCard
               key={`event-${id}`}
               img={i.img}
               alt={`${i.title} Poster`}
