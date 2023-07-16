@@ -113,12 +113,12 @@ export function getEvents() {
   return [
     {
       title: "Event 1",
-      img: "",
+      img: "/images/MM.jpg",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       title: "Event 2",
-      img: "",
+      img: "/images/MM.jpg",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     }
   ];
