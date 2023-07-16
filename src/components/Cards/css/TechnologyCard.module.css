@@ -1,6 +1,6 @@
 .card {
   height: 13rem;
-  width: 18rem;
+  width: 15rem;
   max-width: 95%;
   border-radius: 1rem;
   position: relative;
@@ -16,9 +16,8 @@
 }
 
 .img {
-  max-width: 100%;
-  /* width: 100%;
-  height: 100%; */
+  height: 80%;
+  width: 80%;
   object-fit: contain;
   display: flex;
   justify-content: center;

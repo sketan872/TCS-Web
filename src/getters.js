@@ -76,24 +76,19 @@ export function getSocietyGoals() {
 export function getTechnologiesUsed() {
   return [
     {
-      img: "/images/MM.jpg",
-      title: "JavaScript",
-      subtitle: "The programming language of the web"
+      img: "/images/technologies/react.svg",
+      title: "React.js",
+      subtitle: "React Description Text"
     },
     {
-      img: "/images/MM.jpg",
-      title: "JavaScript",
-      subtitle: "The programming language of the web"
+      img: "/images/technologies/java.png",
+      title: "Java",
+      subtitle: "Java Description Text"
     },
     {
-      img: "/images/MM.jpg",
-      title: "JavaScript",
-      subtitle: "The programming language of the web"
-    },
-    {
-      img: "/images/MM.jpg",
-      title: "JavaScript",
-      subtitle: "The programming language of the web"
+      img: "/images/technologies/cpp.png",
+      title: "C++",
+      subtitle: "C++ Description Text"
     },
   ];
 }
