@@ -38,6 +38,31 @@
   max-width: 100%;
 }
 
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.buttonContainer button {
+  width: 9rem;
+  height: 3rem;
+  background-color: #00000000;
+  border: 1px solid ghostwhite;
+  border-radius: 0.2rem;
+  color: ghostwhite;
+  font-size: 1.2rem;
+  transition: background-color 300ms, color 300ms;
+}
+
+.buttonContainer button:hover {
+  color: black;
+  background-color: ghostwhite;
+  transition: background-color 500ms, color 500ms;
+}
+
 @media (max-width: 1281px) {
   .subsection {
     flex-direction: column-reverse;

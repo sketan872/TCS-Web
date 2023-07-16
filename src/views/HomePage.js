@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import {
-  getFrontpageText,
+  getFrontpageInfo,
   getSocietyGoals,
   getEvents,
   getProjects,
@@ -20,7 +20,7 @@ import EventCard from "./../components/Cards/EventCard";
 import "./css/HomePage.css";
 
 export default function HomePage() {
-  const [fpText, setFpText] = useState({});
+  const [fpInfo, setFpInfo] = useState({});
   const [goals, setGoals] = useState([]);
   const [events, setEvents] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -28,7 +28,7 @@ export default function HomePage() {
   const [postHolders, setPostHolders] = useState([]);
 
   useEffect(_ => {
-    setFpText(getFrontpageText());
+    setFpInfo(getFrontpageInfo());
     setGoals(getSocietyGoals());
     setEvents(getEvents());
     setProjects(getProjects());
@@ -36,13 +36,19 @@ export default function HomePage() {
     setPostHolders(getPostHolders());
   }, []);
 
+  const buttonOnClick = _ => {
+    alert("Hello sir kaise ho aap");
+  }
+
   return (
     <>
       <CircularLogoAndText
-        title={fpText.title}
-        subtitle={fpText.subtitle}
+        title={fpInfo.title}
+        subtitle={fpInfo.subtitle}
         logoPath="/images/site-logo.png"
         logoAlt="ladsjfladjfa"
+        buttonText={fpInfo.buttonText}
+        buttonOnClick={buttonOnClick}
         />
 
       <CardsSection
