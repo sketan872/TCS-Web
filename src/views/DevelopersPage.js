@@ -1,30 +1,28 @@
 import { useState, useEffect } from "react";
 
-import {
-  getEvents
-} from "./../getters";
+import { getDeveloper } from "./../getters";
 
 import EventCard from "./../components/Cards/EventCard";
 import CardsSection from "./../components/Sections/CardsSection";
 
+
 export default function Developer() {
-  const [events, setEvents] = useState([]);
+  const [events, setDeveloper] = useState([]);
 
   useEffect(_ => {
-    setEvents(getEvents());
+    setDeveloper(getDeveloper());
   }, []);
-
 
   return (
     <>
       <CardsSection
-        title={"Events"}
+        title={"Developer"}
         cards={
           events.map((i, id) =>
-            <EventCard
+            <Developer
               key={id}
               img={i.img}
-              alt={`${i.title} Poster`}
+              alt={`Developer ${i.title} Photo`}
               title={i.title}
               subtitle={i.description}
               />
