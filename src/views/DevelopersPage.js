@@ -5,6 +5,8 @@ import { getDevelopers } from "./../getters";
 import DeveloperCard from "./../components/Cards/DeveloperCard";
 import CardsSection from "./../components/Sections/CardsSection";
 
+import styles from "./css/DevelopersPage.module.css";
+
 export default function Developer() {
   const [developers, setDevelopers] = useState([]);
 
@@ -13,9 +15,9 @@ export default function Developer() {
   }, []);
 
   return (
-    <>
+    <div className={styles.developersPage}>
       <CardsSection
-        title={"Developer"}
+        title={"Developers"}
         cards={
           developers.map((i, id) =>
             <DeveloperCard
@@ -28,6 +30,6 @@ export default function Developer() {
           )
         }
         />
-    </>
+    </div>
   );
 }

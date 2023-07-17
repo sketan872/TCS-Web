@@ -13,6 +13,7 @@ const Menu = ({ items, close }) => {
           <Link
             key={id}
             className={location === i.path ? "current" : null}
+            onClick={close}
             to={i.path}
           >
             {i.label}
