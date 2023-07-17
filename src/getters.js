@@ -36,7 +36,7 @@ export function getPostHolders() {
 export function getProjects() {
   return [
     {
-      img: "/images/p1.jpg",
+      img: "/images/website.png",
       imgAlt: "Madhur Verma (President)",
       goalName: "WEBSITE",
       goalRole: "BadAss website",
@@ -53,19 +53,19 @@ export function getProjects() {
 export function getSocietyGoals() {
   return [
     {
-      img: "/images/MM.jpg",
+      img: "/images/ppt.jpg",
       imgAlt: "MM",
       goalName: "Presentation Expert",
       goalRole: "Presentations are the most important aspect of the IT industry that an intern should be skilled in and we look this skill as an important goal.",
     },
     {
-      img: "/images/rah.jpg",
+      img: "/images/resume.webp",
       imgAlt: "rah",
       goalName: "Skilled Resume",
       goalRole: "Making each member aware about the technology prevailing in the IT industry and helping them achieve those skills to fit in resume.",
     },
     {
-      img: "/images/vid.jpg",
+      img: "/images/placement.jpeg",
       imgAlt: "vid",
       goalName: "Placement Ready",
       goalRole: "The ultimate Goal is to make an individual ready for the Placement that every student thrives for.",

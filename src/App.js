@@ -6,6 +6,7 @@ import Menu from "./components/Menu/Menu";
 import HomePage from './views/HomePage';
 
 import './App.css';
+import Developer from "./views/Developer";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -15,19 +16,15 @@ function App() {
       path: "/"
     }, {
       label: "Instagram",
-      path: "https://www.instagram.com/__rahul_goyal___/",
-      lowPriority: true
-    }, {
-      label: "Facebook",
-      path: "https://www.facebook.com/profile.php?id=100038954747406",
+      path: "https://www.instagram.com/tcs_society/",
       lowPriority: true
     }, {
       label: "GitHub",
-      path: "https://github.com/rahulsenpai",
+      path: "https://github.com/",
       lowPriority: true
     }, {
-      label: "Photos",
-      path: "https://www.instagram.com/__rahul_goyal___/",
+      label: "Developers",
+      path: "/Developer",
     }, {
       label: "Registration",
       path: "https://www.instagram.com/__rahul_goyal___/",
@@ -51,6 +48,7 @@ function App() {
           <Route exact path="/" element={<HomePage/>}/>
           <Route exact path="/test" element={<HomePage/>}/>
           <Route path="*" element={<h1>404</h1>}/>
+          <Route exact path="/Developer" element={<Developer/>}/>
         </Routes>
       </main>
     </>
