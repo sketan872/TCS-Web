@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 
 import Navbar from './components/Navbar/Navbar';
 import Menu from "./components/Menu/Menu";
+
 import HomePage from './views/HomePage';
+import DevelopersPage from "./views/DevelopersPage";
 
 import './App.css';
-import Developer from "./views/Developer";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -48,7 +49,7 @@ function App() {
           <Route exact path="/" element={<HomePage/>}/>
           <Route exact path="/test" element={<HomePage/>}/>
           <Route path="*" element={<h1>404</h1>}/>
-          <Route exact path="/Developer" element={<Developer/>}/>
+          <Route exact path="/Developer" element={<DevelopersPage/>}/>
         </Routes>
       </main>
     </>
