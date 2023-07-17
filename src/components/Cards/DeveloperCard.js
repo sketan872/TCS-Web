@@ -1,7 +1,7 @@
 
-import styles from "./css/Developers.module.css";
+import styles from "./css/DeveloperCard.module.css";
 
-const Developers = ({img, alt, title, subtitle}) => {
+const DeveloperCard = ({img, alt, title, subtitle}) => {
   return (
     <div className={styles.card}>
       <div className={styles.img}>
@@ -15,4 +15,4 @@ const Developers = ({img, alt, title, subtitle}) => {
   );
 }
 
-export default Developers;
+export default DeveloperCard;
