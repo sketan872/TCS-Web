@@ -36,28 +36,22 @@ export function getPostHolders() {
 export function getDevelopers() {
   return [
     {
-      img: "/images/madhur.jpg",
-      imgAlt: "Madhur Verma (President)",
-      title: "Madhur Verma",
-      subtitle: "President",
-    },
-    {
-      img: "/images/mahima.jpg",
-      imgAlt: "Mahima Bhardwaj (Vice President)",
-      title: "Mahima Bhardwaj",
-      subtitle: "Vice President",
-    },
-    {
       img: "/images/mohit.jpg",
       imgAlt: "Mohit Saini (Technical Head)",
       title: "Mohit Saini",
       subtitle: "Technical Head",
     },
     {
-      img: "/images/vanshika.jpg",
-      imgAlt: "Vanshika Kakkar (Media Head)",
-      title: "Vanshika Kakkar",
-      subtitle: "Media Head",
+      img: "/images/rahul.webp",
+      imgAlt: "Rahul Goyal(front-end developer)",
+      title: "Rahul Goyal",
+      subtitle: "Front-End Developer",
+    },
+    {
+      img: "/images/vidhukant.webp",
+      imgAlt: "Vidhu Kant Sharma(back-end developer)",
+      title: "Vidhu Kant sharma",
+      subtitle: "Bank-End Developer",
     }
   ];
 }
