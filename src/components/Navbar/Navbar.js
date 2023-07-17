@@ -15,7 +15,7 @@ const Navbar = ({ items, openMenu }) => {
         {items.map((i, id) =>
           <Link
             key={id}
-            className={`${location === i.path ? "current" : null}${i.lowPriority ? " lowPriority" : null}`}
+            className={`${location === i.path ? "current" : null} ${i.lowPriority ? "lowPriority" : null}`}
             to={i.path}
           >
             {i.label}

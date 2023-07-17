@@ -25,7 +25,7 @@ function App() {
       lowPriority: true
     }, {
       label: "Developers",
-      path: "/Developer",
+      path: "/developer",
     }, {
       label: "Registration",
       path: "https://www.instagram.com/__rahul_goyal___/",
