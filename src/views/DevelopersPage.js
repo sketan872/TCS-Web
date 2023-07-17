@@ -5,8 +5,7 @@ import {
 } from "./../getters";
 
 import EventCard from "./../components/Cards/EventCard";
-
-import "./css/Developer.css";
+import CardsSection from "./../components/Sections/CardsSection";
 
 export default function Developer() {
   const [events, setEvents] = useState([]);
@@ -23,7 +22,7 @@ export default function Developer() {
         cards={
           events.map((i, id) =>
             <EventCard
-              key={`event-${id}`}
+              key={id}
               img={i.img}
               alt={`${i.title} Poster`}
               title={i.title}

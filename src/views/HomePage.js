@@ -17,8 +17,6 @@ import TechnologyCard from "./../components/Cards/TechnologyCard";
 import PostHolderCard from "./../components/Cards/PostHolderCard";
 import EventCard from "./../components/Cards/EventCard";
 
-import "./css/HomePage.css";
-
 export default function HomePage() {
   const [fpInfo, setFpInfo] = useState({});
   const [goals, setGoals] = useState([]);
