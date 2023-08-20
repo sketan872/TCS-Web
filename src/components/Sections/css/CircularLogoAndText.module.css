@@ -19,8 +19,49 @@
   font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: Roboto Mono;
 }
-
+.title h1{
+  font-size: 3.5rem;
+  overflow: hidden;
+  position: relative;
+  font-family: Roboto Mono;
+ }
+.title h1::after {
+  content: "Technical";
+  display: inline-block;
+  animation: animation 8s steps(9) infinite;
+  width: 0ch;
+  color: #f5fefd;
+}
+.title h1::before {
+  display: inline-block;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  animation: blinking .4s linear alternate infinite;
+}
+@keyframes animation {
+  25% {
+    content: "Technical";
+    width: 8ch;
+  }
+  40% {
+    width: 0ch;
+  }
+  75% {
+    content: "Technical";
+    width: 8ch;
+  }
+  90% {
+    width: 0ch;
+  }
+}
 .subtitle {
   font-size: 1.2rem;
   text-align: justify;

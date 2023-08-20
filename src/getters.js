@@ -33,6 +33,46 @@ export function getPostHolders() {
   ];
 }
 
+export function getMentors() {
+  return [
+    {
+      img: "/images/jyoti.jpg",
+      imgAlt: "Dr. Jyoti Chaudhary(HOD)",
+      goalName: "Dr. Jyoti Chaudhary",
+      goalRole: "HOD",
+      goalRole1: "CE Department",
+    },
+    {
+      img: "/images/anil.jpg",
+      imgAlt: "Mr. Anil Yadav",
+      goalName: "Mr. Anil Yadav",
+      goalRole: " Assistant Professor",
+      goalRole1: "CE Department",
+    },
+    {
+      img: "/images/archna.jpg",
+      imgAlt: "Mrs. Archana parmar",
+      goalName: "Mrs. Archana Parmar",
+      goalRole: "Assistant Professor",
+      goalRole1: "CE Department",
+    },
+    {
+      img: "/images/ajit.jpg",
+      imgAlt: "Mr.Ajit Kadyan",
+      goalName: "Mr.Ajit kadyan",
+      goalRole: "Assistant Professor",
+      goalRole1: "CE Department",
+    },
+    {
+      img: "/images/minakshi.jpg",
+      imgAlt: "MS. MEENAKSHI CHAWLA",
+      goalName: "MS. Meenakshi Chawla",
+      goalRole: "Assistant Professor",
+      goalRole1: "CE Department",
+    },
+  ];
+}
+
 export function getDevelopers() {
   return [
     {
@@ -113,12 +153,22 @@ export function getTechnologiesUsed() {
       title: "C++",
       subtitle: "C++ Description Text"
     },
+    {
+      img: "/images/technologies/html.png",
+      title: "HTML",
+      subtitle: "HTML Description Text"
+    },
+    {
+      img: "/images/technologies/css.png",
+      title: "CSS",
+      subtitle: "CSS Description Text"
+    },
   ];
 }
 
 export function getFrontpageInfo() {
   return {
-    title: "Hello World",
+    title: "#Let's Get ",
     subtitle: `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 `,
