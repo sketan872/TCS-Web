@@ -169,7 +169,7 @@ export function getTechnologiesUsed() {
 export function getFrontpageInfo() {
   return {
     title: "#Let's Get ",
-    subtitle: "hello tcs socity",
+    subtitle: "If future generations are to remember us more with gratitude than sorrow, we must achieve more than just the miracles of technology. We must also leave them a glimpse of the world as it was created, not just as it looked when we got through with it.",
     logoPath: "/images/site-logo.png",
     buttonText: "Click Me!"
   };

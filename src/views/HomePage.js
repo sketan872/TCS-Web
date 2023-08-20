@@ -39,7 +39,7 @@ export default function HomePage() {
   }, []);
 
   const buttonOnClick = _ => {
-    alert("Hello sir kaise ho aap");
+    alert("TCS society welcome's you");
   }
 
   return (
