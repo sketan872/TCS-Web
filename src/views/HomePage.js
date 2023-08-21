@@ -6,7 +6,8 @@ import {
   getEvents,
   getProjects,
   getTechnologiesUsed,
-  getPostHolders
+  getPostHolders,
+  getMentors
 } from "./../getters";
 
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
@@ -17,6 +18,7 @@ import ProjectsCard from "./../components/Cards/ProjectsCard";
 import TechnologyCard from "./../components/Cards/TechnologyCard";
 import PostHolderCard from "./../components/Cards/PostHolderCard";
 import EventCard from "./../components/Cards/EventCard";
+import MentorsCard from "./../components/Cards/MentorsCard";
 
 export default function HomePage() {
   const [fpInfo, setFpInfo] = useState({});
@@ -25,6 +27,7 @@ export default function HomePage() {
   const [projects, setProjects] = useState([]);
   const [technologies, setTechnologies] = useState([]);
   const [postHolders, setPostHolders] = useState([]);
+  const [mentors, setMentors] = useState([]);
 
   useEffect(_ => {
     setFpInfo(getFrontpageInfo());
@@ -33,10 +36,11 @@ export default function HomePage() {
     setProjects(getProjects());
     setTechnologies(getTechnologiesUsed());
     setPostHolders(getPostHolders());
+    setMentors(getMentors());
   }, []);
 
   const buttonOnClick = _ => {
-    alert("Hello sir kaise ho aap");
+    alert("TCS society welcome's you");
   }
 
   return (
@@ -104,6 +108,22 @@ export default function HomePage() {
               img={i.img}
               title={i.title}
               subtitle={i.subtitle}
+              />
+          )
+        }
+        />
+      
+      <CardsSection
+        title={"Mentors"}
+        cards={
+          mentors.map((i, id) =>
+            <MentorsCard
+              key={id}
+              img={i.img}
+              alt={i.imgAlt}
+              title={i.goalName}
+              subtitle={i.goalRole}
+              subtitle1={i.goalRole1}
               />
           )
         }

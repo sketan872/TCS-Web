@@ -33,20 +33,48 @@ export function getPostHolders() {
   ];
 }
 
-export function getDevelopers() {
+export function getMentors() {
   return [
     {
-      img: "/images/madhur.jpg",
-      imgAlt: "Madhur Verma (President)",
-      title: "Madhur Verma",
-      subtitle: "President",
+      img: "/images/jyoti.jpg",
+      imgAlt: "Dr. Jyoti Chaudhary(HOD)",
+      goalName: "Dr. Jyoti Chaudhary",
+      goalRole: "HOD",
+      goalRole1: "CE Department",
     },
     {
-      img: "/images/mahima.jpg",
-      imgAlt: "Mahima Bhardwaj (Vice President)",
-      title: "Mahima Bhardwaj",
-      subtitle: "Vice President",
+      img: "/images/anil.jpg",
+      imgAlt: "Mr. Anil Yadav",
+      goalName: "Mr. Anil Yadav",
+      goalRole: " Assistant Professor",
+      goalRole1: "CE Department",
     },
+    {
+      img: "/images/archna.jpg",
+      imgAlt: "Mrs. Archana parmar",
+      goalName: "Mrs. Archana Parmar",
+      goalRole: "Assistant Professor",
+      goalRole1: "CE Department",
+    },
+    {
+      img: "/images/ajit.jpg",
+      imgAlt: "Mr.Ajit Kadyan",
+      goalName: "Mr.Ajit kadyan",
+      goalRole: "Assistant Professor",
+      goalRole1: "CE Department",
+    },
+    {
+      img: "/images/minakshi.jpg",
+      imgAlt: "MS. MEENAKSHI CHAWLA",
+      goalName: "MS. Meenakshi Chawla",
+      goalRole: "Assistant Professor",
+      goalRole1: "CE Department",
+    },
+  ];
+}
+
+export function getDevelopers() {
+  return [
     {
       img: "/images/mohit.jpg",
       imgAlt: "Mohit Saini (Technical Head)",
@@ -54,10 +82,16 @@ export function getDevelopers() {
       subtitle: "Technical Head",
     },
     {
-      img: "/images/vanshika.jpg",
-      imgAlt: "Vanshika Kakkar (Media Head)",
-      title: "Vanshika Kakkar",
-      subtitle: "Media Head",
+      img: "/images/rahul.webp",
+      imgAlt: "Rahul Goyal(front-end developer)",
+      title: "Rahul Goyal",
+      subtitle: "Front-End Developer",
+    },
+    {
+      img: "/images/vidhukant.webp",
+      imgAlt: "Vidhu Kant Sharma(back-end developer)",
+      title: "Vidhu Kant sharma",
+      subtitle: "Bank-End Developer",
     }
   ];
 }
@@ -119,15 +153,23 @@ export function getTechnologiesUsed() {
       title: "C++",
       subtitle: "C++ Description Text"
     },
+    {
+      img: "/images/technologies/html.png",
+      title: "HTML",
+      subtitle: "HTML Description Text"
+    },
+    {
+      img: "/images/technologies/css.png",
+      title: "CSS",
+      subtitle: "CSS Description Text"
+    },
   ];
 }
 
 export function getFrontpageInfo() {
   return {
-    title: "Hello World",
-    subtitle: `
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-`,
+    title: "#Let's Get ",
+    subtitle: "If future generations are to remember us more with gratitude than sorrow, we must achieve more than just the miracles of technology. We must also leave them a glimpse of the world as it was created, not just as it looked when we got through with it.",
     logoPath: "/images/site-logo.png",
     buttonText: "Click Me!"
   };

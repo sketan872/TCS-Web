@@ -7,7 +7,7 @@ const CircularLogoAndText = ({logoPath, logoAlt, title, subtitle, buttonText, bu
       <div className={styles.subsection}>
         <div className={styles.text}>
           <div className={styles.title}>
-            {title}
+            <h1>{title}</h1>
           </div>
 
           <hr/>
