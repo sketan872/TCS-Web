@@ -11,6 +11,7 @@ import {
 
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
+import FormSection from "./../components/Sections/FormSection";
 import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
 import ProjectsCard from "./../components/Cards/ProjectsCard";
 import TechnologyCard from "./../components/Cards/TechnologyCard";
@@ -121,6 +122,10 @@ export default function HomePage() {
               />
           )
         }
+        />
+
+      <FormSection
+        title={"Registration Form"}
         />
     </>
   );
