@@ -1,0 +1,47 @@
+
+.form {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 50%;
+  height: calc(100vh - calc(var(--section-title-height) + var(--nav-height)));
+  margin-top: var(--nav-height);
+  margin: auto;
+}
+
+.form label, .buttonWrapper {
+  width: 25rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form label {
+  font-size: 1.2rem;
+  padding: 2rem;
+  background-color: #f6f6f6;
+  border-radius: 1.2rem;
+}
+
+.form label input {
+  font-size: 1rem;
+}
+
+.buttonWrapper {
+  justify-content: center;
+}
+
+.buttonWrapper input[type=submit] {
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  color: black;
+  font-size: 1.2rem;
+  width: 80%;
+}
