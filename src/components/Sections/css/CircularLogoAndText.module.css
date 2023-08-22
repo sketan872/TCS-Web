@@ -105,6 +105,9 @@
 }
 
 @media (max-width: 1281px) {
+  .title h1{
+    font-size: 2rem;
+  }
   .subsection {
     flex-direction: column-reverse;
   }
