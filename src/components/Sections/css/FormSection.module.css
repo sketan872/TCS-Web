@@ -70,6 +70,8 @@
   height: calc(100vh - var(--navbar-height));
   width: 30rem;
   max-width: 90%;
+  flex-direction: column;
+  background-color: white;
 }
 
 .container img {
@@ -81,4 +83,14 @@
   .container {
     height: auto;
   }
+}
+
+.container h1{
+  font-size: large;
+  background-color: aqua;
+  margin-top: 0%;
+}
+.container p{
+  font-size: large;
+  background-color: blueviolet;
 }
