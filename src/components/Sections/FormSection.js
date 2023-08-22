@@ -24,7 +24,8 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
 
   return(
     <div
-      className={title ? sectionStyles.sectionWithTitle : sectionStyles.section}
+      //className={title ? sectionStyles.sectionWithTitle : sectionStyles.section}
+      className={styles.sectionWithTitle}
       style={{
         backgroundColor: bgColor,
         color: fgColor
@@ -36,43 +37,55 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
           bgColor={bgColorTitle}
           fgColor={fgColorTitle} />
       }
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <label>
-          Name:
-          <input
-            value={suggestion.name}
-            onChange={e => setSuggestion(i => ({...i, "name": e.target.value}))}
-          />
-        </label>
 
-        <label>
-          College ID:
-          <input
-            value={suggestion.college_id}
-            onChange={e => setSuggestion(i => ({...i, "college_id": e.target.value}))}
-          />
-        </label>
-
-        <label>
-          E-Mail:
-          <input
-            value={suggestion.e_mail}
-            onChange={e => setSuggestion(i => ({...i, "e_mail": e.target.value}))}
-          />
-        </label>
-
-        <label>
-          Phone:
-          <input
-            value={suggestion.phone_number}
-            onChange={e => setSuggestion(i => ({...i, "phone_number": e.target.value}))}
-          />
-        </label>
-
-        <div className={styles.buttonWrapper}>
-          <input type="submit" value="Register" />
+      <div className={styles.flex}>
+        <div className={styles.container}>
+          <img src="/images/quates.jpg" alt="Quates Poster"/>
         </div>
-      </form>
+
+        <div className={styles.container}>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <label>
+              Name:
+              <input
+                value={suggestion.name}
+                onChange={e => setSuggestion(i => ({...i, "name": e.target.value}))}
+              />
+            </label>
+
+            <label>
+              College ID:
+              <input
+                value={suggestion.college_id}
+                onChange={e => setSuggestion(i => ({...i, "college_id": e.target.value}))}
+              />
+            </label>
+
+            <label>
+              E-Mail:
+              <input
+                value={suggestion.e_mail}
+                onChange={e => setSuggestion(i => ({...i, "e_mail": e.target.value}))}
+              />
+            </label>
+
+            <label>
+              Phone:
+              <input
+                value={suggestion.phone_number}
+                onChange={e => setSuggestion(i => ({...i, "phone_number": e.target.value}))}
+              />
+            </label>
+
+            <div className={styles.buttonWrapper}>
+              <input type="submit" value="Register" />
+            </div>
+          </form>
+        </div>
+
+        <div className={styles.container}>
+        </div>
+      </div>
     </div>
   );
 }

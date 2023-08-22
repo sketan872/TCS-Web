@@ -1,3 +1,15 @@
+.sectionWithTitle {
+  width: 100vw;
+  min-height: calc(100vh - var(--section-title-height));
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
 .form {
   color: black;
@@ -7,7 +19,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  width: 50%;
+  width: 100%;
   height: calc(100vh - calc(var(--section-title-height) + var(--nav-height)));
   margin-top: var(--nav-height);
   margin: auto;
@@ -44,4 +56,26 @@
   color: black;
   font-size: 1.2rem;
   width: 80%;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  height: calc(100vh - var(--navbar-height));
+  width: 30rem;
+  max-width: 90%;
+}
+
+.container img {
+  max-height: 90%;
+  max-width: 90%;
+}
+
+@media (max-width: 1281px) {
+  .container {
+    height: auto;
+  }
 }
