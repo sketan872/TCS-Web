@@ -4,6 +4,8 @@
  * this is from where you'll send GET requests
  */
 
+import axios from "axios";
+
 export function getPostHolders() {
   return [
     {
@@ -205,4 +207,10 @@ export function getEvents() {
       description: "Slackware is an exciting workshop that include making viruses, the remote sensing of different devices and other exciting hacks."
     },
   ];
+}
+
+export function saveRegistration(data, ok, err) {
+  axios.post("https://tcs.vidhukant.xyz/api/registrations/quates", data)
+    .then(_res => ok(_res))
+    .catch(_err => err(_err));
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
+import { saveRegistration } from "./../../getters";
 import SectionTitle from "./SectionTitle";
 
-import sectionStyles from "./css/section.module.css";
 import styles from "./css/FormSection.module.css";
 
-class Suggestion {
+class Registration {
   constructor() {
     this.name = "";
     this.college_id = "";
@@ -15,11 +15,21 @@ class Suggestion {
 }
 
 const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle = "white", fgColorTitle = "black", cards}) => {
-  const [suggestion, setSuggestion] = useState(new Suggestion());
+  const [data, setData] = useState(new Registration());
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert("Backend Coming Soon");
+
+    saveRegistration(data,
+      _data => {
+        console.log(_data);
+        alert("thank you for your registration")
+      },
+      err => {
+        console.log(err)
+        alert("an error occoured")
+      }
+    );
   }
 
   return(
@@ -48,32 +58,32 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
             <label>
               Name:
               <input
-                value={suggestion.name}
-                onChange={e => setSuggestion(i => ({...i, "name": e.target.value}))}
+                value={data.name}
+                onChange={e => setData(i => ({...i, "name": e.target.value}))}
               />
             </label>
 
             <label>
               College ID:
               <input
-                value={suggestion.college_id}
-                onChange={e => setSuggestion(i => ({...i, "college_id": e.target.value}))}
+                value={data.college_id}
+                onChange={e => setData(i => ({...i, "college_id": e.target.value}))}
               />
             </label>
 
             <label>
               E-Mail:
               <input
-                value={suggestion.e_mail}
-                onChange={e => setSuggestion(i => ({...i, "e_mail": e.target.value}))}
+                value={data.e_mail}
+                onChange={e => setData(i => ({...i, "e_mail": e.target.value}))}
               />
             </label>
 
             <label>
               Phone:
               <input
-                value={suggestion.phone_number}
-                onChange={e => setSuggestion(i => ({...i, "phone_number": e.target.value}))}
+                value={data.phone_number}
+                onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
               />
             </label>
 
