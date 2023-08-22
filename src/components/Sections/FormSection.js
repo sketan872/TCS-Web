@@ -84,6 +84,12 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
         </div>
 
         <div className={styles.container}>
+            <div className={styles.headings}>
+            <h1>rules</h1>  
+            </div> 
+            <div className={styles.lines}>
+            <p>HELO FJAJLJ FKJ S LJKSDMKL JSDJJ AJKLFJAKLJ KLJ</p>  
+            </div>
         </div>
       </div>
     </div>
