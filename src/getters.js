@@ -20,15 +20,15 @@ export function getPostHolders() {
     },
     {
       img: "/images/mohit.jpg",
-      imgAlt: "Mohit Saini (Technical Head)",
+      imgAlt: "Mohit Saini (Technical Head )",
       goalName: "Mohit Saini",
-      goalRole: "Technical Head",
+      goalRole: "Technical & Project Head",
     },
     {
       img: "/images/vanshika.jpg",
       imgAlt: "Vanshika Kakkar (Media Head)",
       goalName: "Vanshika Kakkar",
-      goalRole: "Media Head",
+      goalRole: "Media & Creative Head",
     }
   ];
 }
@@ -59,7 +59,7 @@ export function getMentors() {
     {
       img: "/images/ajit.jpg",
       imgAlt: "Mr.Ajit Kadyan",
-      goalName: "Mr.Ajit kadyan",
+      goalName: "Mr.Ajit Kadyan",
       goalRole: "Assistant Professor",
       goalRole1: "CE Department",
     },
@@ -139,30 +139,37 @@ export function getSocietyGoals() {
 export function getTechnologiesUsed() {
   return [
     {
-      img: "/images/technologies/react.svg",
-      title: "React.js",
-      subtitle: "React Description Text"
-    },
-    {
-      img: "/images/technologies/java.png",
-      title: "Java",
-      subtitle: "Java Description Text"
-    },
-    {
-      img: "/images/technologies/cpp.png",
-      title: "C++",
-      subtitle: "C++ Description Text"
-    },
-    {
       img: "/images/technologies/html.png",
       title: "HTML",
-      subtitle: "HTML Description Text"
+      subtitle: "Use in Web-Development"
     },
     {
       img: "/images/technologies/css.png",
       title: "CSS",
-      subtitle: "CSS Description Text"
+      subtitle: "Use in Web-Development"
     },
+    {
+      img: "/images/technologies/js.png",
+      title: "Javascript",
+      subtitle: "Use in Web-Development"
+    },
+    {
+      img: "/images/technologies/react.svg",
+      title: "React.js",
+      subtitle: "Use in Web-Development"
+    },
+    {
+      img: "/images/technologies/java.png",
+      title: "Java",
+      subtitle: "Use in Programing"
+    },
+    {
+      img: "/images/technologies/cpp.png",
+      title: "C++",
+      subtitle: "Use in Programing"
+    },
+   
+   
   ];
 }
 
