@@ -34,6 +34,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
 
   return(
     <div
+      id="register"
       //className={title ? sectionStyles.sectionWithTitle : sectionStyles.section}
       className={styles.sectionWithTitle}
       style={{
