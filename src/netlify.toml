@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/registrations/quates"
+  to = "https://tcs.vidhukant.xyz/api/registrations/quates"
+  status = 200

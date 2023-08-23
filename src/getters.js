@@ -107,7 +107,7 @@ export function getProjects() {
       goalRole: "It describes about the society's event and workshop.",
     },
     {
-      img: "/images/ps.webp",
+      img: "/images/app.png",
       imgAlt: "app",
       goalName: "APP",
       goalRole: "It describes about the society's events, members and there mentors information and gallery.",
@@ -210,7 +210,7 @@ export function getEvents() {
 }
 
 export function saveRegistration(data, ok, err) {
-  axios.post("https://tcs.vidhukant.xyz/api/registrations/quates", data)
+  axios.post("/api/registrations/quates", data)
     .then(_res => ok(_res))
     .catch(_err => err(_err));
 }
