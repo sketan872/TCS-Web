@@ -24,6 +24,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
 
   return(
     <div
+      id="register"
       //className={title ? sectionStyles.sectionWithTitle : sectionStyles.section}
       className={styles.sectionWithTitle}
       style={{
@@ -83,14 +84,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
           </form>
         </div>
 
-        <div className={styles.container}>
-            <div className={styles.headings}>
-            <h1>rules</h1>  
-            </div> 
-            <div className={styles.lines}>
-            <p>HELO FJAJLJ FKJ S LJKSDMKL JSDJJ AJKLFJAKLJ KLJ</p>  
-            </div>
-        </div>
+       
       </div>
     </div>
   );
