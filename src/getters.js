@@ -104,13 +104,13 @@ export function getProjects() {
       img: "/images/website.png",
       imgAlt: "website",
       goalName: "WEBSITE",
-      goalRole: "WEBSITE",
+      goalRole: "It describes about the society's event and workshop.",
     },
     {
       img: "/images/ps.webp",
       imgAlt: "app",
       goalName: "APP",
-      goalRole: "APP",
+      goalRole: "It describes about the society's events, members and there mentors information and gallery.",
     },
   ];
 }
