@@ -10,6 +10,10 @@ const Menu = ({ items, close }) => {
       <div className="closeButton" onClick={close}>X</div>
       <nav>
         {items.map((i, id) =>
+          i.type === "a"
+            ?
+            <a key={id} href={i.path}>{i.label}</a>
+            :
           <Link
             key={id}
             className={location === i.path ? "current" : null}

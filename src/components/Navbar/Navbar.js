@@ -13,6 +13,10 @@ const Navbar = ({ items, openMenu }) => {
 
       <nav>
         {items.map((i, id) =>
+          i.type === "a"
+            ?
+            <a key={id} href={i.path}>{i.label}</a>
+            :
           <Link
             key={id}
             className={`${location === i.path ? "current" : null} ${i.lowPriority ? "lowPriority" : null}`}
