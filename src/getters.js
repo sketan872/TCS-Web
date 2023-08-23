@@ -210,7 +210,7 @@ export function getEvents() {
 }
 
 export function saveRegistration(data, ok, err) {
-    fetch("/api/registrations/quates", {
+    fetch("https://tcs.vidhukant.xyz/api/registrations/quates", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
