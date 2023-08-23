@@ -210,7 +210,13 @@ export function getEvents() {
 }
 
 export function saveRegistration(data, ok, err) {
-  axios.post("/api/registrations/quates", data)
+    fetch("/api/registrations/quates", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data)
+    })
     .then(_res => ok(_res))
-    .catch(_err => err(_err));
+    .catch(_err => err(_err))
 }
