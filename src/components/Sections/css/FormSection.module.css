@@ -61,6 +61,11 @@
   width: 80%;
 }
 
+.buttonWrapper input[type=submit]:disabled {
+  background-color: #d6d6d6;
+  color: #232627;
+}
+
 
 .container {
   display: flex;

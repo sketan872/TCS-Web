@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { saveRegistration } from "./../../getters";
 import SectionTitle from "./SectionTitle";
@@ -16,9 +16,23 @@ class Registration {
 
 const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle = "white", fgColorTitle = "black", cards}) => {
   const [data, setData] = useState(new Registration());
+  const [submitDisabled, setSubmitDisabled] = useState(true);
+  const [submitPermaDisabled, setSubmitPermaDisabled] = useState(false);
+
+  useEffect(_ => {
+    let disabled = submitPermaDisabled;
+
+    if (data.name.trim() === "") disabled = true;
+    if (data.college_id.trim() === "") disabled = true;
+    if (data.e_mail.trim() === "") disabled = true;
+    if (data.phone_number.trim().length < 10) disabled = true;
+
+    setSubmitDisabled(disabled);
+  }, [data, setSubmitDisabled, submitPermaDisabled])
 
   const handleSubmit = e => {
     e.preventDefault();
+    setSubmitPermaDisabled(true)
 
     saveRegistration(data,
       _data => {
@@ -28,6 +42,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
       err => {
         console.log(err)
         alert("an error occoured")
+        setSubmitPermaDisabled(false)
       }
     );
   }
@@ -59,6 +74,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
             <label>
               Name:
               <input
+                type="text"
                 value={data.name}
                 onChange={e => setData(i => ({...i, "name": e.target.value}))}
               />
@@ -67,6 +83,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
             <label>
               College ID:
               <input
+                type="text"
                 value={data.college_id}
                 onChange={e => setData(i => ({...i, "college_id": e.target.value}))}
               />
@@ -75,6 +92,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
             <label>
               E-Mail:
               <input
+                type="email"
                 value={data.e_mail}
                 onChange={e => setData(i => ({...i, "e_mail": e.target.value}))}
               />
@@ -83,18 +101,18 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
             <label>
               Phone:
               <input
+                type="tel"
                 value={data.phone_number}
                 onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
               />
             </label>
 
             <div className={styles.buttonWrapper}>
-              <input type="submit" value="Register" />
+              <input type="submit" value="Register" disabled={submitDisabled} />
             </div>
           </form>
         </div>
 
-       
       </div>
     </div>
   );

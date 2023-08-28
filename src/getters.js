@@ -4,8 +4,6 @@
  * this is from where you'll send GET requests
  */
 
-import axios from "axios";
-
 export function getPostHolders() {
   return [
     {
@@ -210,7 +208,7 @@ export function getEvents() {
 }
 
 export function saveRegistration(data, ok, err) {
-    fetch("https://tcs.vidhukant.xyz/api/registrations/quates", {
+    fetch("https://tcs.vidhukant.xyz/api/registrations/recruitment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
