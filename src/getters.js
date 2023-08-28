@@ -215,6 +215,7 @@ export function saveRegistration(data, ok, err) {
       },
       body: JSON.stringify(data)
     })
+    .then(_res => _res.json())
     .then(_res => ok(_res))
     .catch(_err => err(_err))
 }

@@ -36,12 +36,16 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
 
     saveRegistration(data,
       _data => {
-        console.log(_data);
-        alert("thank you for your registration")
+        if (_data.message === "success") {
+          alert("thank you for your registration")
+        } else {
+          alert(`Error: ${_data.error}`)
+          setSubmitPermaDisabled(false)
+        }
       },
       err => {
         console.log(err)
-        alert("an error occoured")
+        alert(err.error)
         setSubmitPermaDisabled(false)
       }
     );
