@@ -70,7 +70,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
 
       <div className={styles.flex}>
         <div className={styles.container}>
-          <img src="/images/registration-form-poster-04092022.png" alt="Quates Poster"/>
+          <img src="/images/quates.png" alt="Quates Poster"/>
         </div>
 
         <div className={styles.container}>
@@ -106,6 +106,24 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
               Phone:
               <input
                 type="tel"
+                value={data.phone_number}
+                onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
+              />
+            </label>
+            <label>
+              year
+              <input
+                type="radio"
+                value={data.phone_number}
+                value={data.phone_number}
+                onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
+              />
+            </label>
+            <label>
+              Branch
+              <input
+                type="radio"
+                value={data.phone_number}
                 value={data.phone_number}
                 onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
               />
