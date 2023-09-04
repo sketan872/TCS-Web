@@ -42,13 +42,13 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
           toast("thank you for your registration")
           setData(new Registration());
         } else {
-          alert(`Error: ${_data.error}`)
+          toast(`Error: ${_data.error}`)
           setSubmitPermaDisabled(false)
         }
       },
       err => {
         console.log(err)
-        alert(err.error)
+        toast(err.error)
         setSubmitPermaDisabled(false)
       }
     );
