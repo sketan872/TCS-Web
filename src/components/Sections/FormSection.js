@@ -11,6 +11,8 @@ class Registration {
     this.college_id = "";
     this.e_mail = "";
     this.phone_number = "";
+    this.year = "1";
+    this.branch = "1";
   }
 }
 
@@ -50,6 +52,8 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
       }
     );
   }
+
+  console.log(data)
 
   return(
     <div
@@ -110,24 +114,24 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
                 onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
               />
             </label>
-            <label>
-              year
-              <input
-                type="radio"
-                value={data.phone_number}
-                value={data.phone_number}
-                onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
-              />
-            </label>
-            <label>
-              Branch
-              <input
-                type="radio"
-                value={data.phone_number}
-                value={data.phone_number}
-                onChange={e => setData(i => ({...i, "phone_number": e.target.value}))}
-              />
-            </label>
+
+            <div className={styles.radioLabel}>
+              <span onClick={_ => setData(i => ({...i, "year": "1"}))}>
+                <input type="radio" value={data.year} checked={data.year === "1"} /> 1st Year
+              </span>
+              <span onClick={_ => setData(i => ({...i, "year": "2"}))}>
+                <input type="radio" value={data.year} checked={data.year === "2"} /> 2nd Year
+              </span>
+            </div>
+
+            <div className={styles.radioLabel}>
+              <span onClick={_ => setData(i => ({...i, "branch": "CE"}))}>
+                <input type="radio" value={data.branch} checked={data.branch === "CE"} /> CE
+              </span>
+              <span onClick={_ => setData(i => ({...i, "branch": "EC"}))}>
+                <input type="radio" value={data.branch} checked={data.branch === "EC"} /> EC
+              </span>
+            </div>
 
             <div className={styles.buttonWrapper}>
               <input type="submit" value="Register" disabled={submitDisabled} />

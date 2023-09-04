@@ -25,7 +25,7 @@
   width: 100%;
 }
 
-.form label, .buttonWrapper {
+.form label, .buttonWrapper, .radioLabel {
   width: 100%;
   height: 4rem;
   display: flex;
@@ -36,7 +36,12 @@
   padding: 0 2rem;
 }
 
-.form label {
+.radioLabel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form label, .radioLabel {
   font-size: 1.2rem;
   background-color: #f6f6f6;
   border-radius: 1.2rem;
