@@ -70,7 +70,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
 
       <div className={styles.flex}>
         <div className={styles.container}>
-          <img src="/images/quates.png" alt="Quates Poster"/>
+          <img src="/images/registration-form-poster-04092022.png" alt="Quates Poster"/>
         </div>
 
         <div className={styles.container}>
