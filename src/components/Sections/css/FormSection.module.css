@@ -45,6 +45,7 @@
 .form label input {
   font-size: 1rem;
   height: 1.2rem;
+  width: 13rem;
 }
 
 .buttonWrapper {
