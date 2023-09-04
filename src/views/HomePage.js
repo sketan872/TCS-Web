@@ -10,6 +10,8 @@ import {
   getMentors
 } from "./../getters";
 
+import { toast } from "react-toastify";
+
 import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
 import FormSection from "./../components/Sections/FormSection";
@@ -40,7 +42,7 @@ export default function HomePage() {
   }, []);
 
   const buttonOnClick = _ => {
-    alert("TCS society welcome's you");
+    toast("TCS society welcome's you");
   }
 
   return (

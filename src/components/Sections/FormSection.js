@@ -40,6 +40,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
       _data => {
         if (_data.message === "success") {
           alert("thank you for your registration")
+          setData(new Registration());
         } else {
           alert(`Error: ${_data.error}`)
           setSubmitPermaDisabled(false)

@@ -7,6 +7,9 @@ import Menu from "./components/Menu/Menu";
 import HomePage from './views/HomePage';
 import DevelopersPage from "./views/DevelopersPage";
 
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import './App.css';
 
 function App() {
@@ -35,6 +38,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       {showMenu &&
         <Menu
           items={menuItems}
