@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { saveRegistration } from "./../../getters";
 import SectionTitle from "./SectionTitle";
-
+import { toast } from "react-toastify";
 import styles from "./css/FormSection.module.css";
 
 class Registration {
@@ -39,7 +39,7 @@ const FormSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle 
     saveRegistration(data,
       _data => {
         if (_data.message === "success") {
-          alert("thank you for your registration")
+          toast("thank you for your registration")
           setData(new Registration());
         } else {
           alert(`Error: ${_data.error}`)
