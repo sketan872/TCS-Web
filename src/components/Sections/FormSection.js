@@ -12,7 +12,7 @@ class Registration {
     this.e_mail = "";
     this.phone_number = "";
     this.year = "1";
-    this.branch = "1";
+    this.branch = "CE";
   }
 }
 
