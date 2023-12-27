@@ -42,7 +42,7 @@ export default function HomePage() {
   }, []);
 
   const buttonOnClick = _ => {
-    toast("muthi maar meri");
+    toast("TCS society welcome's you");
   }
 
   return (
