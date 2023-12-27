@@ -7,25 +7,25 @@
 export function getPostHolders() {
   return [
     {
-      img: "https://images/madhur.jpg",
+      img: "/images/madhur.jpg",
       imgAlt: "Madhur Verma (President)",
       goalName: "Madhur Verma",
       goalRole: "President",
     },
     {
-      img: "https://images/mahima.jpg",
+      img: "/images/mahima.jpg",
       imgAlt: "Mahima Bhardwaj (Vice President)",
       goalName: "Mahima Bhardwaj",
       goalRole: "Vice President",
     },
     {
-      img: "https:///mohit.jpg",
+      img: "/images/mohit.jpg",
       imgAlt: "Mohit Saini (Technical Head )",
       goalName: "Mohit Saini",
       goalRole: "Technical & Project Head",
     },
     {
-      img: "https://images/vanshika.jpg",
+      img: "/images/vanshika.jpg",
       imgAlt: "Vanshika Kakkar (Media Head)",
       goalName: "Vanshika Kakkar",
       goalRole: "Media & Creative Head",
