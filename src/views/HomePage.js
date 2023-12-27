@@ -146,9 +146,9 @@ export default function HomePage() {
         }
         />
 
-      <FormSection
+      {/*<FormSection
         title={"Registration Form"}
-        />
+        />*/}
     </>
   );
 }

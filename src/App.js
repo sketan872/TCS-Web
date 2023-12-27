@@ -29,11 +29,11 @@ function App() {
     }, {
       label: "Developers",
       path: "/developer",
-    }, {
+    }/*, {
       label: "Registration",
       path: "#register",
       type: "a",
-    }
+    }*/
   ];
 
   return (
