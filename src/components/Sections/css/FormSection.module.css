@@ -1,6 +1,7 @@
 .sectionWithTitle {
   width: 100vw;
   min-height: calc(100vh - var(--section-title-height));
+  margin-top: 100px;
 }
 
 .flex {

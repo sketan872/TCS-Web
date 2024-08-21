@@ -1,22 +1,14 @@
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import CardsSection from "./../components/Sections/CardsSection";
 import {
   getDeveloper
 } from "./../getters";
-
-import CardsSection from "./../components/Sections/CardsSection";
-import Developers from "./../components/Cards/Developers";
-
 import "./css/Developer.css";
-
 export default function Developer() {
   const [events, setDeveloper] = useState([]);
-
   useEffect(_ => {
     setDeveloper(getDeveloper());
   }, []);
-
-
   return (
     <>
       <CardsSection

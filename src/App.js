@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Navbar from './components/Navbar/Navbar';
 import Menu from "./components/Menu/Menu";
+import Navbar from './components/Navbar/Navbar';
 
-import HomePage from './views/HomePage';
 import DevelopersPage from "./views/DevelopersPage";
+import HomePage from './views/HomePage';
 
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 import './App.css';
+import FormSection from "./components/Sections/FormSection";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -66,6 +67,7 @@ function App() {
           <Route exact path="/test" element={<HomePage/>}/>
           <Route path="*" element={<h1>404</h1>}/>
           <Route exact path="/Developer" element={<DevelopersPage/>}/>
+          <Route exact path="/register" element={<FormSection/>}/>
         </Routes>
       </main>
     </>
