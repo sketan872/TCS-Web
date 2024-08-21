@@ -7,7 +7,7 @@
 export function getPostHolders() {
   return [
     {
-      img: "/images/madhur.jpg",
+      img: "/images/ashish.jpg",
       imgAlt: "Ashish (President)",
       goalName: "Ashish",
       goalRole: "President",

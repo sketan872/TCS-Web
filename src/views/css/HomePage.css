@@ -1,0 +1,24 @@
+.btn{
+    width: 200px;
+    padding: 20px;
+    background-color: #333;
+    color: rgb(249, 242, 242);
+ text-decoration: none;
+border-radius:10px  ;
+margin-bottom: 20px;
+border: 1px solid lavenderblush;
+
+}
+.btn-link{
+    color:aliceblue;
+list-style: none;
+text-decoration: none;
+font-size: 20px;
+}
+.btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 13px;
+    /* background-color: aquamarine; */
+}

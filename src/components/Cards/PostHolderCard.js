@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./css/PostHolderCard.module.css";
 
 const PostHolderCard = ({img, alt, title, subtitle}) => {
@@ -9,8 +10,11 @@ const PostHolderCard = ({img, alt, title, subtitle}) => {
       <div className={styles.textWrapper}>
         <div className={styles.title}>{title}</div>
         <div className={styles.subtitle}>{subtitle}</div>
+       
       </div>
+      
     </div>
+    
   );
 }
 

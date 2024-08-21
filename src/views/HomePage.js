@@ -1,26 +1,27 @@
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import {
-  getFrontpageInfo,
-  getSocietyGoals,
   getEvents,
-  getProjects,
-  getTechnologiesUsed,
+  getFrontpageInfo,
+  getMentors,
   getPostHolders,
-  getMentors
+  getProjects,
+  getSocietyGoals,
+  getTechnologiesUsed
 } from "./../getters";
+import './css/HomePage.css';
 
 import { toast } from "react-toastify";
 
-import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 import CardsSection from "./../components/Sections/CardsSection";
+import CircularLogoAndText from "./../components/Sections/CircularLogoAndText";
 // import FormSection from "./../components/Sections/FormSection";
-import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
-import ProjectsCard from "./../components/Cards/ProjectsCard";
-import TechnologyCard from "./../components/Cards/TechnologyCard";
-import PostHolderCard from "./../components/Cards/PostHolderCard";
+import { Link } from "react-router-dom";
 import EventCard from "./../components/Cards/EventCard";
 import MentorsCard from "./../components/Cards/MentorsCard";
+import PostHolderCard from "./../components/Cards/PostHolderCard";
+import ProjectsCard from "./../components/Cards/ProjectsCard";
+import SocietyGoalCard from "./../components/Cards/SocietyGoalCard";
+import TechnologyCard from "./../components/Cards/TechnologyCard";
 
 export default function HomePage() {
   const [fpInfo, setFpInfo] = useState({});
@@ -141,11 +142,13 @@ export default function HomePage() {
               alt={i.imgAlt}
               title={i.goalName}
               subtitle={i.goalRole}
+
               />
           )
         }
         />
-
+        <div className="btn-wrapper"><button type="submit" className="btn"><Link className="btn-link" to="/register">Register</Link></button></div>
+   
       {/*<FormSection
         title={"Registration Form"}
         />*/}

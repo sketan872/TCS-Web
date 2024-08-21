@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import SectionTitle from "./SectionTitle";
 
-import sectionStyles from "./css/section.module.css";
+
 import styles from "./css/CardsSection.module.css";
+import sectionStyles from "./css/section.module.css";
 
 const CardsSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle = "white", fgColorTitle = "black", cards}) => {
   return (
@@ -21,6 +23,8 @@ const CardsSection = ({title, bgColor = "black", fgColor = "white", bgColorTitle
       <div className={styles.flex}>
         {cards}
       </div>
+
+    
     </div>
   );
 }
