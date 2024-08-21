@@ -105,7 +105,7 @@ const register = () => {
       <div className={styles.flex}>
         <div className={styles.container}>
           <img
-            src="/images/registration-form-poster-04092022-new.jpg"
+            src="/images/registerform.png"
             alt="Quates Poster"
           />
         </div>
