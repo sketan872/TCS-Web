@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./css/PostHolderCard.module.css";
 
 const PostHolderCard = ({img, alt, title, subtitle}) => {

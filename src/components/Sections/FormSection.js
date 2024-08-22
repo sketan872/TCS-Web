@@ -1,11 +1,10 @@
+import { getDatabase, push, ref, set } from "firebase/database";
 import { useEffect, useState } from "react";
-
-import { getDatabase, ref, set } from "firebase/database";
 import { toast } from "react-toastify";
 import { app } from "../../firebase";
-import { saveRegistration } from "./../../getters";
 import styles from "./css/FormSection.module.css";
 import SectionTitle from "./SectionTitle";
+
 class Registration {
   constructor() {
     this.name = "";
@@ -25,69 +24,44 @@ const FormSection = ({
   fgColor = "white",
   bgColorTitle = "white",
   fgColorTitle = "black",
-  cards,
 }) => {
   const [data, setData] = useState(new Registration());
   const [submitDisabled, setSubmitDisabled] = useState(true);
   const [submitPermaDisabled, setSubmitPermaDisabled] = useState(false);
-const[counter,setCounter] = useState(0);
-const register = () => {
-  const newCounter = counter + 1; // Increment counter
-  setCounter(newCounter); // Update state
 
-  set(ref(db, `members/user${newCounter}`), data)
-    .then(() => {
-      console.log('Data saved successfully!');
-      toast.success('Registration successful!');
-    })
-    .catch((error) => {
-      console.error('Error saving data:', error);
-      toast.error('Failed to save registration data.');
-    });
-};
-  useEffect(
-    (_) => {
-      let disabled = submitPermaDisabled;
-
-      if (data.name.trim() === "") disabled = true;
-      if (data.college_id.trim() === "") disabled = true;
-      if (data.e_mail.trim() === "") disabled = true;
-      if (data.phone_number.trim().length < 10) disabled = true;
-
-      setSubmitDisabled(disabled);
-    },
-    [data, setSubmitDisabled, submitPermaDisabled]
-  );
+  useEffect(() => {
+    const disabled = !(
+      data.name.trim() &&
+      data.college_id.trim() &&
+      data.e_mail.trim() &&
+      data.phone_number.trim().length >= 10
+    );
+    setSubmitDisabled(disabled);
+  }, [data]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitPermaDisabled(true);
 
-    saveRegistration(
-      data,
-      (_data) => {
-        if (_data.message === "success") {
-          toast("thank you for your registration");
-          setData(new Registration());
-        } else {
-          toast(`Error: ${_data.error}`);
-          setSubmitPermaDisabled(false);
-        }
-      },
-      (err) => {
-        console.log(err);
-        toast(err.error);
+    const userRef = push(ref(db, 'members'));
+    set(userRef, data)
+      .then(() => {
+        console.log('Data saved successfully!');
+        toast.success('Registration successful!');
+        setData(new Registration());
+      })
+      .catch((error) => {
+        console.error('Error saving data:', error);
+        toast.error('Failed to save registration data.');
+      })
+      .finally(() => {
         setSubmitPermaDisabled(false);
-      }
-    );
+      });
   };
-
-  // console.log(data);
 
   return (
     <div
       id="register"
-      //className={title ? sectionStyles.sectionWithTitle : sectionStyles.section}
       className={styles.sectionWithTitle}
       style={{
         backgroundColor: bgColor,
@@ -106,7 +80,7 @@ const register = () => {
         <div className={styles.container}>
           <img
             src="/images/registerform.png"
-            alt="Quates Poster"
+            alt="Registration Form"
           />
         </div>
 
@@ -117,9 +91,7 @@ const register = () => {
               <input
                 type="text"
                 value={data.name}
-                onChange={(e) =>
-                  setData((i) => ({ ...i, name: e.target.value }))
-                }
+                onChange={(e) => setData((prev) => ({ ...prev, name: e.target.value }))}
               />
             </label>
 
@@ -128,9 +100,7 @@ const register = () => {
               <input
                 type="text"
                 value={data.college_id}
-                onChange={(e) =>
-                  setData((i) => ({ ...i, college_id: e.target.value }))
-                }
+                onChange={(e) => setData((prev) => ({ ...prev, college_id: e.target.value }))}
               />
             </label>
 
@@ -139,9 +109,7 @@ const register = () => {
               <input
                 type="email"
                 value={data.e_mail}
-                onChange={(e) =>
-                  setData((i) => ({ ...i, e_mail: e.target.value }))
-                }
+                onChange={(e) => setData((prev) => ({ ...prev, e_mail: e.target.value }))}
               />
             </label>
 
@@ -150,25 +118,23 @@ const register = () => {
               <input
                 type="tel"
                 value={data.phone_number}
-                onChange={(e) =>
-                  setData((i) => ({ ...i, phone_number: e.target.value }))
-                }
+                onChange={(e) => setData((prev) => ({ ...prev, phone_number: e.target.value }))}
               />
             </label>
 
             <div className={styles.radioLabel}>
-              <span onClick={(_) => setData((i) => ({ ...i, year: "1" }))}>
+              <span onClick={() => setData((prev) => ({ ...prev, year: "1" }))}>
                 <input
                   type="radio"
-                  value={data.year}
+                  value="1"
                   checked={data.year === "1"}
                 />{" "}
                 1st Year
               </span>
-              <span onClick={(_) => setData((i) => ({ ...i, year: "2" }))}>
+              <span onClick={() => setData((prev) => ({ ...prev, year: "2" }))}>
                 <input
                   type="radio"
-                  value={data.year}
+                  value="2"
                   checked={data.year === "2"}
                 />{" "}
                 2nd Year
@@ -176,18 +142,18 @@ const register = () => {
             </div>
 
             <div className={styles.radioLabel}>
-              <span onClick={(_) => setData((i) => ({ ...i, branch: "CE" }))}>
+              <span onClick={() => setData((prev) => ({ ...prev, branch: "CE" }))}>
                 <input
                   type="radio"
-                  value={data.branch}
+                  value="CE"
                   checked={data.branch === "CE"}
                 />{" "}
                 CE
               </span>
-              <span onClick={(_) => setData((i) => ({ ...i, branch: "EC" }))}>
+              <span onClick={() => setData((prev) => ({ ...prev, branch: "EC" }))}>
                 <input
                   type="radio"
-                  value={data.branch}
+                  value="EC"
                   checked={data.branch === "EC"}
                 />{" "}
                 EC
@@ -198,8 +164,7 @@ const register = () => {
               <input
                 type="submit"
                 value="Register"
-                onClick={register}
-                disabled={submitDisabled}
+                disabled={submitDisabled || submitPermaDisabled}
               />
             </div>
           </form>
