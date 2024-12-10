@@ -65,23 +65,13 @@ export function getMentors() {
 
 export function getDevelopers() {
   return [
+    
+    
     {
-      img: "/images/mohit.jpg",
-      imgAlt: "Mohit Saini (Technical Head)",
-      title: "Mohit Saini",
-      subtitle: "Technical Head",
-    },
-    {
-      img: "/images/rahul.webp",
-      imgAlt: "Rahul Goyal(front-end developer)",
-      title: "Rahul Goyal",
-      subtitle: "Front-End Developer",
-    },
-    {
-      img: "/images/vidhukant.webp",
-      imgAlt: "Vidhu Kant Sharma(back-end developer)",
-      title: "Vidhu Kant sharma",
-      subtitle: "Bank-End Developer",
+      img: "/images/ketan.jpg",
+      imgAlt: "Ketan Sharma(back-end developer)",
+      title: "Ketan Sharma",
+      subtitle: "Front-End Developer and Bank-End Developer",
     }
   ];
 }
